@@ -110,7 +110,7 @@
    "bulletin": "An [[orbiter|orbiter]] just spotted a dust storm growing.",
    "a": {
     "who": "doctor",
-    "line": "Dust steals our power, not our health. Build the wall now!"
+    "line": "Dust blocks our sunlight, not the Sun's radiation. Build the wall now!"
    },
    "b": {
     "who": "life",
@@ -248,9 +248,9 @@
    },
    "after": {
     "keep": "The [[greenhouse|greenhouse]] keeps growing food, but it costs power every day.",
-    "off": "No lights, no growing. Food will be tight from now on.",
+    "off": "No lights, no growing. The next days will have less food.",
     "source": "Opportunity ran on sunlight. With no sun, it could not recharge. Dust blocks sunlight but not cosmic [[radiation|radiation]]: Curiosity still measured about 9 [[doseUnit|units]] per hour during the storm (NASA RadLab).",
-    "dim": "Half the light, half the food. A path in the middle."
+    "dim": "Half the light, half the food. The next days will have less food."
    },
    "react": {
     "keep": [
@@ -450,9 +450,9 @@
   },
   "notes": [
    "The real storm lasted months. The game squeezes it into 30 days.",
-   "Dust level 10.8 on 10 June 2018 is real. Other days are game numbers; the dust stays thick, as it did for weeks.",
+   "The dust level on 10 June 2018 is real: about 10.8 (one NASA figure shows 10.5). Other days are game numbers; the dust stays thick, as it did for weeks.",
    "The Radiation bar is the game's dose budget, not NASA's real limit.",
-   "In 2018 the Sun was quiet. The game's solar storm is based on September 2017.",
+   "In 2018 the Sun was quiet. The game's solar storm is based on the September 2017 solar particle event.",
    "Message delays come from JPL Horizons for each day.",
    "Dust numbers come from Opportunity at Meridiani Planum. Radiation numbers come from Curiosity at Gale Crater, far away.",
    "Dates use Earth calendar days in 2018. Each game day stands for one sol, which is 40 minutes longer."
@@ -464,11 +464,11 @@
    ],
    [
     "Radiation",
-    "Tiny, super-fast bits from space that pass right through things. Too much can make people sick."
+    "Tiny, super-fast bits from space. They pass through thin things; thick walls and water stop part of them. Too much can make people sick."
    ],
    [
     "Solar storm",
-    "When the Sun suddenly throws out a huge burst of radiation."
+    "When the Sun suddenly throws out a huge burst of radiation. Scientists call it a solar particle event."
    ],
    [
     "Dust level",
@@ -480,14 +480,14 @@
    ],
    [
     "Water wall",
-    "Water is great at stopping radiation. Water tanks around the shelter make a wall."
+    "The hydrogen in water stops part of the radiation. Water tanks around the shelter make a wall: more tanks, more protection, but no wall stops it all."
    ]
   ],
   "dataTitle": "Data",
   "creditsTitle": "Credits",
   "data": [
    [
-    "Opportunity's last dust level, 10.8 on 10 June 2018: NASA/JPL",
+    "Opportunity's last dust level, about 10.8 on 10 June 2018 (one NASA figure shows 10.5): NASA/JPL",
     "https://www.jpl.nasa.gov/news/six-things-about-opportunitys-recovery-efforts/"
    ],
    [
@@ -521,6 +521,10 @@
    [
     "Radiation on Mars measured by Curiosity: RAD data in NASA OSDR RadLab",
     "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
+   ],
+   [
+    "Water walls cut the radiation dose by about 50–70%: NASA RadWorks study (NTRS 20150001237)",
+    "https://ntrs.nasa.gov/citations/20150001237"
    ]
   ],
   "credits": [
@@ -617,14 +621,14 @@
  ],
  "glossary": {
   "sol": "A day on Mars. It lasts 24 hours and 40 minutes. Scientists call it a sol.",
-  "radiation": "Tiny, super-fast bits from space that pass right through things. Too much can make people sick.",
-  "solarStorm": "When the Sun suddenly throws out a huge burst of radiation.",
+  "radiation": "Tiny, super-fast bits from space. They pass through thin things; thick walls and water stop part of them. Too much can make people sick.",
+  "solarStorm": "When the Sun suddenly throws out a huge burst of radiation. Scientists call it a solar particle event.",
   "dust": "Mars dust storms can cover the whole planet. Dust blocks sunlight, but it does not bring radiation.",
   "dustLevel": "How thick the dust is. 1 is a little hazy. 10 is almost dark at noon.",
   "rover": "A robot car that drives around Mars and studies it.",
   "orbiter": "A spacecraft that circles Mars and takes pictures from above.",
   "shelter": "A small room with thick walls where the crew hides from radiation.",
-  "waterWall": "Water is great at stopping radiation. Water tanks around the shelter make a wall.",
+  "waterWall": "The hydrogen in water stops part of the radiation. Water tanks around the shelter make a wall: more tanks, more protection, but no wall stops it all.",
   "panels": "Solar panels turn sunlight into electricity.",
   "greenhouse": "A glass garden where the crew grows food under lamps.",
   "delay": "Messages fly as fast as light, but Mars is so far away that they still take minutes.",
@@ -707,7 +711,8 @@
    ]
   },
   "seeWhatIf": "See it in What if",
-  "wall": "{n} parts in the wall"
+  "wall": "{n} parts in the wall",
+  "allBestFail": "Every choice you made was a wise one, and the station still fell. Smart choices can still meet bad luck. Real missions face that too."
  },
  "names": {
   "captain-ada": "Ada",

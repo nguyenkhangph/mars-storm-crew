@@ -110,7 +110,7 @@
    "bulletin": "Một [[orbiter|tàu bay quanh Sao Hỏa]] vừa thấy bão bụi đang lớn dần.",
    "a": {
     "who": "doctor",
-    "line": "Bụi chỉ lấy điện, không hại người. Xây tường ngay đi!"
+    "line": "Bụi chỉ che nắng, không chặn được bức xạ Mặt Trời. Xây tường ngay đi!"
    },
    "b": {
     "who": "life",
@@ -248,9 +248,9 @@
    },
    "after": {
     "keep": "[[greenhouse|Nhà kính]] vẫn ra rau, nhưng ngày nào cũng tốn điện.",
-    "off": "Không đèn thì rau không lớn. Từ giờ phải ăn dè sẻn.",
+    "off": "Không đèn thì rau không lớn. Những ngày tới sẽ ít thức ăn hơn.",
     "source": "Opportunity chạy bằng nắng. Không có nắng, nó không sạc được. Bụi che được ánh nắng nhưng không chặn được [[radiation|bức xạ]] vũ trụ: trong cơn bão, Curiosity vẫn đo được khoảng 9 [[doseUnit|đơn vị]] mỗi giờ (NASA RadLab).",
-    "dim": "Nửa ánh sáng, nửa phần rau. Một lựa chọn ở giữa."
+    "dim": "Nửa ánh sáng, nửa phần rau. Những ngày tới sẽ ít thức ăn hơn."
    },
    "react": {
     "keep": [
@@ -450,9 +450,9 @@
   },
   "notes": [
    "Cơn bão thật kéo dài hàng tháng. Trò chơi nén lại còn 30 ngày.",
-   "Độ mờ bụi 10,8 ngày 10/6/2018 là số thật. Các ngày khác là số game; bụi vẫn dày, như ngoài đời kéo dài nhiều tuần.",
+   "Độ mờ bụi ngày 10/6/2018 là số thật: khoảng 10,8 (một hình của NASA ghi 10,5). Các ngày khác là số game; bụi vẫn dày, như ngoài đời kéo dài nhiều tuần.",
    "Thanh Bức xạ là ngân sách liều của trò chơi, không phải giới hạn thật của NASA.",
-   "Năm 2018 Mặt Trời khá yên. Bão Mặt Trời trong game dựa trên sự kiện tháng 9/2017.",
+   "Năm 2018 Mặt Trời khá yên. Bão Mặt Trời trong game dựa trên sự kiện hạt Mặt Trời (solar particle event) tháng 9/2017.",
    "Độ trễ tin nhắn lấy từ JPL Horizons cho đúng từng ngày.",
    "Số bụi lấy từ Opportunity ở đồng bằng Meridiani. Số bức xạ lấy từ Curiosity ở hố Gale, cách rất xa.",
    "Ngày tháng tính theo lịch Trái Đất năm 2018. Mỗi ngày trong game ứng với một sol, dài hơn 40 phút."
@@ -464,11 +464,11 @@
    ],
    [
     "Bức xạ",
-    "Những hạt tí hon bay cực nhanh từ vũ trụ, xuyên qua mọi thứ. Nhận nhiều quá sẽ hại sức khỏe."
+    "Những hạt tí hon bay cực nhanh từ vũ trụ. Chúng xuyên qua được vật mỏng; tường dày và nước chặn được một phần. Nhận nhiều quá sẽ hại sức khỏe."
    ],
    [
     "Bão Mặt Trời",
-    "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc."
+    "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc. Các nhà khoa học gọi là sự kiện hạt Mặt Trời (solar particle event)."
    ],
    [
     "Độ mờ bụi",
@@ -480,14 +480,14 @@
    ],
    [
     "Tường nước",
-    "Nước chắn bức xạ rất giỏi. Xếp các bồn nước quanh hầm thành một bức tường."
+    "Hydro trong nước chặn được một phần bức xạ. Xếp các bồn nước quanh hầm thành một bức tường: càng nhiều bồn càng được che nhiều, nhưng không tường nào chặn hết."
    ]
   ],
   "dataTitle": "Dữ liệu",
   "creditsTitle": "Ghi công",
   "data": [
    [
-    "Độ mờ bụi cuối cùng của Opportunity, 10,8 ngày 10/6/2018: NASA/JPL",
+    "Độ mờ bụi cuối cùng của Opportunity, khoảng 10,8 ngày 10/6/2018 (một hình của NASA ghi 10,5): NASA/JPL",
     "https://www.jpl.nasa.gov/news/six-things-about-opportunitys-recovery-efforts/"
    ],
    [
@@ -521,6 +521,10 @@
    [
     "Bức xạ trên Sao Hỏa do Curiosity đo: số liệu RAD trong NASA OSDR RadLab",
     "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
+   ],
+   [
+    "Tường nước giảm khoảng 50–70% liều bức xạ: nghiên cứu RadWorks của NASA (NTRS 20150001237)",
+    "https://ntrs.nasa.gov/citations/20150001237"
    ]
   ],
   "credits": [
@@ -617,14 +621,14 @@
  ],
  "glossary": {
   "sol": "Một ngày trên Sao Hỏa, dài 24 giờ 40 phút. Các nhà khoa học gọi là sol.",
-  "radiation": "Những hạt tí hon bay cực nhanh từ vũ trụ, xuyên qua mọi thứ. Nhận nhiều quá sẽ hại sức khỏe.",
-  "solarStorm": "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc.",
+  "radiation": "Những hạt tí hon bay cực nhanh từ vũ trụ. Chúng xuyên qua được vật mỏng; tường dày và nước chặn được một phần. Nhận nhiều quá sẽ hại sức khỏe.",
+  "solarStorm": "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc. Các nhà khoa học gọi là sự kiện hạt Mặt Trời (solar particle event).",
   "dust": "Bão bụi Sao Hỏa có thể phủ kín cả hành tinh. Bụi che nắng nhưng không mang bức xạ.",
   "dustLevel": "Bụi dày cỡ nào. 1 là hơi mờ. 10 là giữa trưa mà gần như tối om.",
   "rover": "Xe robot chạy khắp Sao Hỏa để nghiên cứu.",
   "orbiter": "Tàu vũ trụ bay vòng quanh Sao Hỏa, chụp ảnh từ trên cao.",
   "shelter": "Căn phòng nhỏ tường dày, nơi cả đội trốn bức xạ.",
-  "waterWall": "Nước chắn bức xạ rất giỏi. Xếp các bồn nước quanh hầm thành một bức tường.",
+  "waterWall": "Hydro trong nước chặn được một phần bức xạ. Xếp các bồn nước quanh hầm thành một bức tường: càng nhiều bồn càng được che nhiều, nhưng không tường nào chặn hết.",
   "panels": "Tấm pin mặt trời biến ánh nắng thành điện.",
   "greenhouse": "Khu vườn kính, nơi cả đội trồng rau dưới ánh đèn.",
   "delay": "Tin nhắn bay nhanh như ánh sáng, nhưng Sao Hỏa xa quá nên vẫn mất vài phút.",
@@ -707,7 +711,8 @@
    ]
   },
   "seeWhatIf": "Xem trong Nếu chọn khác",
-  "wall": "{n} phần trong tường"
+  "wall": "{n} phần trong tường",
+  "allBestFail": "Mọi lựa chọn của em đều khôn ngoan, nhưng trạm vẫn không trụ được. Chọn khôn ngoan vẫn có thể gặp xui. Nhiệm vụ thật cũng vậy."
  },
  "names": {
   "captain-ada": "Ada",

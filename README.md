@@ -58,6 +58,7 @@ Without the packs the game still runs; pictures are just blank.
 - Earth–Mars distance: JPL Horizons
 - Live space weather (radiation storms, strong flares, CMEs forecast to reach Mars): NASA DONKI (`ccmc.gsfc.nasa.gov/DONKI-API`)
 - The September 2017 storm in DONKI: https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1
+- Water walls cut radiation dose by about 50–70%: NASA RadWorks (https://ntrs.nasa.gov/citations/20150001237)
 - Where Opportunity (Meridiani) and Curiosity (Gale) are: NASA Mars Trek (https://trek.nasa.gov/mars/)
 - For teachers: Canadian Space Agency food-production toolkit (https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/)
 

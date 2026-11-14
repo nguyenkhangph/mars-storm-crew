@@ -56,7 +56,7 @@ export function ReportScreen({ t, choices, luck, cert, onWhatIf, onAgain }: { t:
       <div className="report-bottom">
         <div className="report-picks">
           {d.best && <PickRow t={t} p={d.best} kind="best" />}
-          {d.rethink ? <PickRow t={t} p={d.rethink} kind="rethink" /> : <div className="pick-row best"><Icon name="star" size={36} /><div>{t.report.allBest}</div></div>}
+          {d.rethink ? <PickRow t={t} p={d.rethink} kind="rethink" /> : <div className="pick-row best"><Icon name="star" size={36} /><div>{d.failed ? t.report.allBestFail : t.report.allBest}</div></div>}
         </div>
         <div className="badge">
           <div className="badge-medal"><Icon name="star" size={48} /></div>
