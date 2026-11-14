@@ -1,0 +1,718 @@
+{
+ "lang": "English",
+ "ui": {
+  "title": "MARS STORM CREW",
+  "subtitle": "Keep your crew safe through the great dust storm",
+  "start": "Start the mission",
+  "sol": "Day",
+  "life": "Life",
+  "power": "Power",
+  "radiation": "Radiation",
+  "o2": "Oxygen",
+  "water": "Water",
+  "food": "Food",
+  "delay": "Message to Earth takes",
+  "gain": "Gain",
+  "lose": "Cost",
+  "next": "Continue",
+  "confirm": "Confirm",
+  "sources": "Where is this data from?",
+  "close": "Close",
+  "min": "min",
+  "sec": "s",
+  "waiting": "Calling Earth… waiting for the answer",
+  "waitNote": "Your question flies to Earth and the answer flies back. On Mars, that really takes",
+  "wallTitle": "The water wall",
+  "wallLead": "Each part of water has one job: you drink it, or it guards the shelter from radiation.",
+  "tank": "Drinking water",
+  "shelter": "Inside the shelter",
+  "parts": "parts",
+  "inWall": "parts in the wall",
+  "add": "Pump one part of water into the wall",
+  "remove": "Take one part back to the tank",
+  "wall0": [
+   "No wall",
+   "Lots to drink, but a solar storm would hit hard."
+  ],
+  "wall1": [
+   "A thin wall",
+   "A little shield, and plenty to drink."
+  ],
+  "wall2": [
+   "A good wall",
+   "A fair mix of shield and drinking water."
+  ],
+  "wall3": [
+   "A thick wall",
+   "Very safe, but water may run short later."
+  ],
+  "dangerLow": "Careful, supplies are running low!",
+  "traveling": "The days pass by…",
+  "whatIfEyebrow": "What if you chose differently?",
+  "whatIfTitle": "One choice, two different stories.",
+  "yourPath": "Your choice",
+  "otherPath": "The other choice",
+  "turning": "The choice",
+  "tryOther": "Try another decision",
+  "playAgain": "Play again",
+  "sunToday": "The Sun today",
+  "langSwitch": "VI",
+  "storm2": "Day 24: another solar storm! Your water wall soaked up part of it.",
+  "hiddenNote": "Real or not? You'll find out after you choose.",
+  "discoveries": "Discoveries",
+  "lifeParts": "Life shows whichever of these three is lowest",
+  "chartLife": "Life (%)",
+  "chartDose": "Radiation (%)",
+  "rotate": "Turn your phone sideways to play.",
+  "storm2Title": "Day 24",
+  "sound": "Sound",
+  "skip": "Skip ▸▸",
+  "tapNext": "Tap to continue",
+  "howto": "How to play",
+  "watchIntro": "Watch the intro",
+  "back": "Back",
+  "play": "Play",
+  "howtoTitle": "How to play",
+  "howtoLead": "You lead a small Mars base through a 30-day dust storm.",
+  "termHint": "Tap a dotted word to learn what it means.",
+  "solCard": "1 sol = 24 h 40 min",
+  "pickTitle": "Choose your Commander",
+  "pickLead": "Who will lead the crew? Pick the face you like.",
+  "pickGo": "Let's go!",
+  "storm2NoWall": "Day 24: another solar storm! With no water wall, only the shelter walls protected the crew.",
+  "goodNews": "Message from Earth, sent {delay} ago: “We can see your station lights. A ship is on its way. Hang on, 6 more days!”",
+  "skip21": "Day 21: the shelter has no water wall, so there is nothing to take back.",
+  "askMia": "Is Earth awake right now?",
+  "nameLabel": "Your Commander name",
+  "namePlaceholder": "A nickname, e.g. Star",
+  "nameNote": "Only on this device. Use a nickname, not your full name."
+ },
+ "labels": {
+  "real": "Real data",
+  "based": "Based on a real event",
+  "scenario": "Scenario",
+  "game": "Game number",
+  "hidden": "?"
+ },
+ "roles": {
+  "commander": "Commander",
+  "power": "Power engineer",
+  "life": "Life support engineer",
+  "doctor": "Doctor",
+  "rover": "Rover driver",
+  "scientist": "Scientist",
+  "botanist": "Plant expert"
+ },
+ "intro": [
+  "In 2018, dust hid the Sun. Opportunity never woke up.",
+  "Now it's your turn to keep the lights on."
+ ],
+ "sols": {
+  "4": {
+   "bulletin": "An [[orbiter|orbiter]] just spotted a dust storm growing.",
+   "a": {
+    "who": "doctor",
+    "line": "Dust steals our power, not our health. Build the wall now!"
+   },
+   "b": {
+    "who": "life",
+    "line": "Keep the water for drinking. The Sun is calm today."
+   },
+   "cards": {},
+   "after": {
+    "default": "Dust only blocks sunlight. A [[waterWall|water wall]] protects against [[radiation|radiation]] from the Sun."
+   },
+   "react": {
+    "default": [
+     "botanist",
+     "Why can't water do both jobs?"
+    ]
+   }
+  },
+  "8": {
+   "bulletin": "The dust storm is getting closer. There's still time to go out.",
+   "a": {
+    "who": "rover",
+    "line": "Let's fetch ice before the water runs out!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Stay in and measure the dust. It's so rare!"
+   },
+   "cards": {
+    "ice": [
+     "Fetch ice",
+     "More water to drink",
+     "Uses power, and more radiation outside"
+    ],
+    "bags": [
+     "Pile up soil bags",
+     "A thicker wall, no water used",
+     "Uses power, and more radiation outside"
+    ],
+    "science": [
+     "Do an experiment",
+     "A new discovery",
+     "No extra water or wall"
+    ]
+   },
+   "after": {
+    "ice": "You came back with [[ice|ice]]. Outside, though, the crew got more [[radiation|radiation]].",
+    "bags": "The wall is thicker now. Outside, though, the crew got more [[radiation|radiation]].",
+    "science": "Staying inside kept the crew safe, but the water did not grow."
+   },
+   "react": {
+    "ice": [
+     "rover",
+     "Got it! Our boots are dusty, but the tank is fuller."
+    ],
+    "bags": [
+     "life",
+     "Heavy work, but the wall is thicker now!"
+    ],
+    "science": [
+     "scientist",
+     "Look at these dust grains under the microscope!"
+    ]
+   }
+  },
+  "11": {
+   "bulletin": "Dust now covers the Sun. The solar panels barely get light.",
+   "a": {
+    "who": "power",
+    "line": "Put every bit of power into heat and air!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "A storm like this is rare. Save some power to study it!"
+   },
+   "cards": {
+    "safety": [
+     "All power to safety",
+     "Warm, with plenty of air today",
+     "The battery drains fast"
+    ],
+    "science": [
+     "Keep some for science",
+     "A new discovery",
+     "Less power for safety"
+    ],
+    "reserve": [
+     "Save it for later",
+     "The battery lasts longer",
+     "Colder, and less air is made"
+    ]
+   },
+   "after": {
+    "default": "The thicker the dust, the less power the [[panels|solar panels]] make."
+   },
+   "react": {
+    "safety": [
+     "power",
+     "Heaters on. Keep your jackets close, everyone."
+    ],
+    "science": [
+     "scientist",
+     "Thank you! This storm data is gold."
+    ],
+    "reserve": [
+     "life",
+     "Brr! Chilly, but the battery will last."
+    ]
+   }
+  },
+  "14": {
+   "bulletin": "Opportunity has gone silent. The [[dustLevel|dust level]] reached 10.8!",
+   "a": {
+    "who": "botanist",
+    "line": "Without lights, our garden stops making food!"
+   },
+   "b": {
+    "who": "power",
+    "line": "Those garden lamps eat too much power!"
+   },
+   "cards": {
+    "keep": [
+     "Keep the lights on",
+     "The garden keeps growing food",
+     "Uses power every day"
+    ],
+    "dim": [
+     "Dim the lamps",
+     "Some food, less power",
+     "Food grows slowly"
+    ],
+    "off": [
+     "Turn the lights off",
+     "Saves power",
+     "Food may run out"
+    ]
+   },
+   "after": {
+    "keep": "The [[greenhouse|greenhouse]] keeps growing food, but it costs power every day.",
+    "off": "No lights, no growing. Food will be tight from now on.",
+    "source": "Opportunity ran on sunlight. With no sun, it could not recharge.",
+    "dim": "Half the light, half the food. A path in the middle."
+   },
+   "react": {
+    "keep": [
+     "botanist",
+     "Thank you! The beans are still growing."
+    ],
+    "dim": [
+     "botanist",
+     "They'll grow slower, but they'll grow."
+    ],
+    "off": [
+     "botanist",
+     "Good night, little plants."
+    ]
+   }
+  },
+  "17": {
+   "bulletin": "Beep beep! The [[radiation|radiation]] meter jumped. A [[solarStorm|solar storm]]?",
+   "a": {
+    "who": "doctor",
+    "line": "Into the shelter, now! Don't wait!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Let's ask Earth first. It might be a false alarm!"
+   },
+   "cards": {
+    "shelter": [
+     "Go to the shelter",
+     "Safest if the storm is real",
+     "A false alarm wastes power"
+    ],
+    "ask": [
+     "Ask Earth",
+     "Find out for sure",
+     "One-way message: {delay}"
+    ]
+   },
+   "after": {
+    "real": "It was real! The fastest bits arrived before Earth could even answer.",
+    "false": "It was a [[falseAlarm|false alarm]]. Asking first saved power this time.",
+    "source": "In September 2017, radiation on Mars really did more than double.",
+    "falseShelter": "It was a [[falseAlarm|false alarm]]. The [[shelter|shelter]] heaters used power for nothing.",
+    "clueWrong": "The clue was wrong this time. Even good clues can trick us."
+   },
+   "bulletinBoth": "Beep beep! Both [[radiation|radiation]] meters jumped at once!",
+   "bulletinOne": "Beep! One [[radiation|radiation]] meter jumped, but the other stayed quiet.",
+   "react": {
+    "shelter": [
+     "doctor",
+     "Everyone in! Close the hatch!"
+    ],
+    "ask": [
+     "scientist",
+     "Message sent. Now we wait…"
+    ],
+    "shelterFalse": [
+     "doctor",
+     "Better safe than sorry. Next time, let's read the meters."
+    ]
+   }
+  },
+  "21": {
+   "bulletin": "The water tank is almost empty, and the dust is still here.",
+   "a": {
+    "who": "life",
+    "line": "Let's take water back from the wall and drink it!"
+   },
+   "b": {
+    "who": "doctor",
+    "line": "But what if another solar storm comes?"
+   },
+   "cards": {
+    "keep": [
+     "Keep the wall",
+     "Still protected",
+     "Water may run short"
+    ],
+    "drain": [
+     "Take water back",
+     "More to drink",
+     "A thinner wall"
+    ]
+   },
+   "after": {
+    "default": "One part of water can't be a drink and a wall at the same time."
+   },
+   "bulletinFull": "The dust is still here. Do we still need the water wall?",
+   "aFull": "We have water to spare. Take some back anyway?",
+   "bFull": "Keep the wall. Another storm could come.",
+   "react": {
+    "keep": [
+     "doctor",
+     "Small sips, everyone. The wall stays."
+    ],
+    "drain": [
+     "life",
+     "Fresh water for everyone!"
+    ],
+    "keepFull": [
+     "doctor",
+     "We have enough water. The wall stays."
+    ]
+   }
+  },
+  "26": {
+   "bulletin": "The storm now wraps around the whole planet.",
+   "a": {
+    "who": "power",
+    "line": "Let's wipe the panels. Every bit of power helps!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "We have a little power left. One last experiment!"
+   },
+   "cards": {
+    "clean": [
+     "Wipe the panels",
+     "A little more power",
+     "More radiation outside, and the Sun is weak"
+    ],
+    "burst": [
+     "Last experiment",
+     "A new discovery",
+     "The panels stay dusty"
+    ]
+   },
+   "after": {
+    "default": "Clean panels still need sunshine, and the dust will stay for weeks."
+   },
+   "react": {
+    "clean": [
+     "power",
+     "Shiny panels! Every bit of light helps."
+    ],
+    "burst": [
+     "scientist",
+     "Last measurement saved. We made history!"
+    ]
+   }
+  }
+ },
+ "end": {
+  "rescued": "Earth sent an early rescue. Everyone is safe, but the station had to close.",
+  "why": {
+   "o2": "Day {sol}: the air ran low.",
+   "water": "Day {sol}: the water ran out.",
+   "food": "Day {sol}: the food ran out.",
+   "dose": "Day {sol}: the crew got too much radiation."
+  },
+  "realLife": "In real life, this storm lasted many more weeks.",
+  "sunQ": "If you were at the station today, would you shelter?",
+  "sunLoading": "Asking NASA's DONKI…",
+  "sunCount": "DONKI recorded {n} solar energetic particle events in the last 30 days.",
+  "sunNone": "DONKI recorded no solar energetic particle events in the last 30 days.",
+  "sunFail": "Couldn't reach DONKI. See NASA's page directly.",
+  "decisionNames": {
+   "4": "Day 4 · Water wall",
+   "8": "Day 8 · Going outside",
+   "11": "Day 11 · Sharing power",
+   "14": "Day 14 · The garden",
+   "17": "Day 17 · Solar storm",
+   "21": "Day 21 · Low water",
+   "26": "Day 26 · Last choice"
+  },
+  "endings": {
+   "radiation": "Everyone made it, but the crew got a lot of radiation.",
+   "explorers": "Help has arrived, and you made amazing discoveries!",
+   "strong": "Help has arrived. The crew is strong, with supplies to spare.",
+   "close": "Help has arrived, just in time!"
+  },
+  "failTitle": "Mission ended early.",
+  "keyChoice": "The choice that changed the most: {name} · {option}",
+  "oppy": "The real Opportunity never woke up. On 13 February 2019, NASA said goodbye after 15 years on Mars.",
+  "oppyWin": "Your crew kept the lights on.",
+  "oppyFail": "Your crew made it home safe.",
+  "oppyTitle": "Remembering Opportunity",
+  "closeTitle": "So close!",
+  "closeWhy": {
+   "o2": "The ship landed on Day 30, just as the air ran low. Everyone is safe.",
+   "water": "The ship landed on Day 30, just as the water ran out. Everyone is safe.",
+   "food": "The ship landed on Day 30, just as the food ran out. Everyone is safe.",
+   "dose": "The ship landed on Day 30, just as the radiation got too high. Everyone is safe."
+  },
+  "oppyNeed": "To wake up, it needed the dust level to fall below 2.",
+  "missionCode": "Mission code {code}: open the game with ?seed={code} to replay this storm."
+ },
+ "sources": {
+  "title": "Where is this data from?",
+  "kid": "This station is imagined. Dust numbers come from Opportunity, radiation from Curiosity. The two rovers were in different places.",
+  "labels": {
+   "real": "Measured by NASA.",
+   "based": "Real, but moved to another day.",
+   "scenario": "A situation our team wrote.",
+   "game": "A number that balances the game."
+  },
+  "notes": [
+   "The real storm lasted months. The game squeezes it into 30 days.",
+   "Dust level 10.8 on 10 June 2018 is real. Other days are game numbers; the dust stays thick, as it did for weeks.",
+   "The Radiation bar is the game's dose budget, not NASA's real limit.",
+   "In 2018 the Sun was quiet. The game's solar storm is based on September 2017.",
+   "Message delays come from JPL Horizons for each day.",
+   "Dust numbers come from Opportunity at Meridiani Planum. Radiation numbers come from Curiosity at Gale Crater, far away.",
+   "Dates use Earth calendar days in 2018. Each game day stands for one sol, which is 40 minutes longer."
+  ],
+  "words": [
+   [
+    "Sol",
+    "A day on Mars. It lasts 24 hours and 40 minutes. Scientists call it a sol."
+   ],
+   [
+    "Radiation",
+    "Tiny, super-fast bits from space that pass right through things. Too much can make people sick."
+   ],
+   [
+    "Solar storm",
+    "When the Sun suddenly throws out a huge burst of radiation."
+   ],
+   [
+    "Dust level",
+    "How thick the dust is. 1 is a little hazy. 10 is almost dark at noon."
+   ],
+   [
+    "Shelter",
+    "A small room with thick walls where the crew hides from radiation."
+   ],
+   [
+    "Water wall",
+    "Water is great at stopping radiation. Water tanks around the shelter make a wall."
+   ]
+  ],
+  "dataTitle": "Data",
+  "creditsTitle": "Credits",
+  "data": [
+   [
+    "Opportunity's last dust level, 10.8 on 10 June 2018: NASA/JPL",
+    "https://www.jpl.nasa.gov/news/six-things-about-opportunitys-recovery-efforts/"
+   ],
+   [
+    "Opportunity's mission ends, 13 February 2019: NASA/JPL",
+    "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   ],
+   [
+    "Radiation on Mars, September 2017: Curiosity RAD, Zeitlin et al. 2018",
+    "https://doi.org/10.1029/2018GL077760"
+   ],
+   [
+    "Earth–Mars distance for each day: JPL Horizons",
+    "https://ssd.jpl.nasa.gov/horizons/"
+   ],
+   [
+    "Solar storms today: NASA DONKI (CCMC)",
+    "https://ccmc.gsfc.nasa.gov/DONKI/"
+   ],
+   [
+    "Planet-wide dust after June 2018: Montabone et al. 2020",
+    "https://doi.org/10.1029/2019JE006111"
+   ]
+  ],
+  "credits": [
+   "Crew portraits: Cozy Space Portraits by Bramble & Byte",
+   "Icons: Cozy Space Icons & UI by Bramble & Byte",
+   "Station, rocks, water tank: Mars Base Pixel Art by MutterPixel Studio",
+   "Station scenes: put together by the Mars Storm Crew team from these sprites",
+   "Font: Be Vietnam Pro (SIL Open Font License 1.1)",
+   "Code: Mars Storm Crew team, MIT License"
+  ]
+ },
+ "cutscene": [
+  {
+   "k": "space",
+   "text": "This is Mars, the red planet. The year is 2018."
+  },
+  {
+   "k": "clear",
+   "text": "One June morning, a little cloud of [[dust|dust]] began to grow."
+  },
+  {
+   "k": "storm",
+   "text": "It grew and grew, until dust hid the Sun all over Mars."
+  },
+  {
+   "k": "signal",
+   "text": "Opportunity, a robot [[rover|rover]] that ran on sunlight, fell asleep. It never woke up."
+  },
+  {
+   "k": "crew",
+   "text": "Now imagine a team of explorers living on Mars that summer."
+  },
+  {
+   "k": "commander",
+   "text": "You are their Commander. Keep everyone safe for 30 days."
+  },
+  {
+   "k": "sol",
+   "text": "A Mars day is called a [[sol|sol]]. It is 40 minutes longer than ours."
+  },
+  {
+   "k": "logo",
+   "text": "Every choice has a cost. Ready, Commander?"
+  }
+ ],
+ "howto": [
+  {
+   "icon": "signal",
+   "title": "1. Read the news",
+   "text": "Each choice starts with the news and two crew members who disagree."
+  },
+  {
+   "icon": "check",
+   "title": "2. Pick a card",
+   "text": "Every card shows what you gain and what it costs."
+  },
+  {
+   "icon": "heart",
+   "title": "3. Watch the bars",
+   "text": "Life (tap for oxygen, water, food) and Power: keep them high. Radiation: keep it low."
+  },
+  {
+   "icon": "water",
+   "title": "4. Water does one job",
+   "text": "Water is for drinking or for the radiation wall, never both."
+  },
+  {
+   "icon": "rocket",
+   "title": "5. Earth is far away",
+   "text": "A message to Earth takes minutes. Sometimes you must decide alone."
+  },
+  {
+   "icon": "star",
+   "title": "6. Real or game?",
+   "text": "Labels show what is real NASA data and what is a game number."
+  },
+  {
+   "icon": "flask",
+   "title": "7. Tricky words",
+   "text": "Tap a dotted word to learn what it means."
+  },
+  {
+   "icon": "crew",
+   "title": "8. Reach day 30",
+   "text": "Keep everyone safe until help comes. Then see what one different choice would change."
+  }
+ ],
+ "glossary": {
+  "sol": "A day on Mars. It lasts 24 hours and 40 minutes. Scientists call it a sol.",
+  "radiation": "Tiny, super-fast bits from space that pass right through things. Too much can make people sick.",
+  "solarStorm": "When the Sun suddenly throws out a huge burst of radiation.",
+  "dust": "Mars dust storms can cover the whole planet. Dust blocks sunlight, but it does not bring radiation.",
+  "dustLevel": "How thick the dust is. 1 is a little hazy. 10 is almost dark at noon.",
+  "rover": "A robot car that drives around Mars and studies it.",
+  "orbiter": "A spacecraft that circles Mars and takes pictures from above.",
+  "shelter": "A small room with thick walls where the crew hides from radiation.",
+  "waterWall": "Water is great at stopping radiation. Water tanks around the shelter make a wall.",
+  "panels": "Solar panels turn sunlight into electricity.",
+  "greenhouse": "A glass garden where the crew grows food under lamps.",
+  "delay": "Messages fly as fast as light, but Mars is so far away that they still take minutes.",
+  "oxygen": "The air we breathe. The station makes it with electricity.",
+  "falseAlarm": "When an alarm goes off but nothing dangerous is really happening.",
+  "ice": "Mars has frozen water under the ground. Melt it, and you can drink it."
+ },
+ "report": {
+  "button": "Mission report",
+  "title": "Mission report",
+  "lead": "We replayed your mission with every other choice, using only what you knew when you chose.",
+  "criteria": {
+   "safety": {
+    "name": "Crew safety",
+    "1": "The crew needed a rescue this time.",
+    "2": "Everyone made it, just barely.",
+    "3": "Everyone made it, with supplies to spare."
+   },
+   "radiation": {
+    "name": "Radiation care",
+    "1": "The crew got a lot of radiation.",
+    "2": "Some radiation, but not too much.",
+    "3": "You kept radiation low. Great shielding!"
+   },
+   "science": {
+    "name": "Discoveries",
+    "1": "Safety first, little time for science.",
+    "2": "A good number of discoveries.",
+    "3": "Amazing discoveries!"
+   },
+   "wise": {
+    "name": "Smart choices",
+    "1": "{n} of {m} choices were the best in that moment.",
+    "2": "{n} of {m} choices were the best in that moment.",
+    "3": "{n} of {m} choices were the best in that moment!"
+   }
+  },
+  "best": "Your best choice",
+  "rethink": "Worth another try",
+  "instead": "“{other}” instead of “{chosen}”",
+  "effect": {
+   "saved": "Without it, the station would have failed on day {sol}.",
+   "dose": "It saved the crew {n}% radiation.",
+   "life": "It left {n}% more supplies.",
+   "sci": "It brought {n} more discoveries."
+  },
+  "maybe": {
+   "saved": "It could have kept the station going past day {sol}.",
+   "dose": "It could have saved {n}% radiation.",
+   "life": "It could have left {n}% more supplies.",
+   "sci": "It could have brought {n} more discoveries."
+  },
+  "allBest": "Every choice you made was already the best one. Wow!",
+  "badgeTitle": "Your badge",
+  "badges": {
+   "scientist": [
+    "Young Scientist",
+    "You found time to study the storm."
+   ],
+   "wallBuilder": [
+    "Wall Builder",
+    "You built a strong water wall early."
+   ],
+   "careful": [
+    "Careful Commander",
+    "When the alarm rang, you kept everyone safe first."
+   ],
+   "gardener": [
+    "Space Gardener",
+    "You kept the garden growing in the dark."
+   ],
+   "explorer": [
+    "Brave Explorer",
+    "You went outside to bring back ice."
+   ],
+   "brave": [
+    "Bold Commander",
+    "You made tough calls and learned from them."
+   ]
+  },
+  "seeWhatIf": "See it in What if",
+  "wall": "{n} parts in the wall"
+ },
+ "names": {
+  "captain-ada": "Ada",
+  "engineer-rosa": "Rosa",
+  "mechanic-gus": "Gus",
+  "doctor-lin": "Lin",
+  "pilot-kai": "Kai",
+  "officer-noor": "Noor",
+  "cadet-mia": "Mia",
+  "robot-b0t": "B0T",
+  "alien-zib": "Zib"
+ },
+ "cert": {
+  "button": "Download certificate",
+  "making": "Making your certificate…",
+  "titleWin": "Certificate of Mission Success",
+  "titleBrave": "Certificate of Bravery",
+  "awarded": "This certificate is awarded to",
+  "didWin": "for leading a Mars base through the great dust storm of 2018 and bringing the whole crew home.",
+  "didBrave": "for leading a Mars base through the great dust storm of 2018 and keeping the whole crew safe.",
+  "commander": "Commander",
+  "badge": "Badge",
+  "code": "Mission code",
+  "date": "Date",
+  "footer": "A NASA Space Apps Challenge 2026 project. A game certificate, not an official NASA document."
+ }
+}

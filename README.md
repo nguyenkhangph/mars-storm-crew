@@ -1,0 +1,68 @@
+# Mars Storm Crew (Vượt Bão Sao Hỏa)
+
+_Formerly "SOL CREW: Stay Alive!"._
+
+A browser game for ages 7–12, built for NASA Space Apps 2026 (*Build a Junior Astronaut Mission Trainer*).
+You are Mission Commander of a Mars station during the 2018 global dust storm, the storm that ended Opportunity.
+Seven decisions over 30 sols. Water can be drunk or used as a radiation wall, never both.
+
+English by default, Vietnamese with the **VI** button (or `?lang=vi`).
+On iPhone, Safari → Share → **Add to Home Screen** opens the game full screen in landscape.
+The Commander can pick a face and type a nickname (kept only in this browser). At the end, a certificate PNG is drawn in the browser and downloaded; nothing is uploaded, and it says it is not an official NASA document.
+
+Demo seeds: `?seed=998` real storm, `?seed=3989` real storm + second storm, `?seed=1` false alarm, `?seed=8` false alarm + second storm, `?seed=3` false alarm where the meter clue misleads. The end screen shows each game's mission code so a class can replay the same storm.
+`npm run snapshot` saves the last 30 days of DONKI events to `public/donki-snapshot.json` as an offline fallback.
+
+## Run it
+
+```bash
+npm install
+python scripts/setup_assets.py --portraits <portraits.zip> --icons <icons.zip> --marsbase <Mars_Base.7z> --bg <mountains.png>
+npm run dev
+```
+
+`npm test` runs the balance and string checks, `npm run build` makes `dist/`.
+
+### Asset packs (not in this repo)
+
+Their licenses do not allow sharing the raw files, so `public/assets/` is git-ignored.
+Each teammate downloads the packs and runs `scripts/setup_assets.py` (needs `pip install pillow numpy py7zr`).
+It copies the sprites and UI kit pieces (panels, buttons, bars, dialog frames) and composes `scenes/clear.webp` and `scenes/storm.webp`.
+Sounds are synthesized in the browser (`src/ui/sound.ts`), so there are no audio files.
+Each argument takes a `.zip`, a `.7z` or an extracted folder.
+
+| Pack | Used for |
+|---|---|
+| Cozy Space Portraits | crew faces |
+| Cozy Space Icons & UI | HUD icons |
+| Mars Base Pixel Art (MutterPixel Studio) | station buildings, rocks, water tank |
+| Mountain strip PNG (dry, no water) | horizon (source to be credited) |
+
+Without the packs the game still runs; pictures are just blank.
+
+## How it works
+
+- `src/engine/` is a pure simulation: `simulate(choices, luck)` always gives the same run, so *What if?* re-runs it with one choice changed.
+- `src/data/delay.ts`: Earth–Mars light time per day from JPL Horizons.
+- `src/data/tau.ts`: dust haze. Only 10.8 on sol 14 (10 June 2018, Opportunity) is measured; the rest is a game curve.
+- `src/engine/debrief.ts`: the end-of-mission report. It replays the run with every other option at each decision (same luck) to rate safety, radiation, discoveries and smart choices, and to name the best choice and one worth retrying. No AI or LLM.
+- Every bulletin carries a label: Real data, Based on a real event, Scenario, or Game number.
+
+## Sources
+
+- Opportunity dust opacity, June 2018: NASA/JPL
+- Curiosity RAD radiation, September 2017 solar event: Guo et al.
+- Earth–Mars distance: JPL Horizons
+- Live solar particle events: NASA DONKI (`api.nasa.gov`)
+
+## Deploy
+
+```bash
+npm run build
+vercel deploy dist --prod
+```
+Deploy the built `dist/` from a machine that has run the setup script. A Git-connected build would have no art.
+
+## License
+
+Code: MIT. Art: Cozy Space Portraits and Cozy Space Icons & UI by Bramble & Byte; Mars Base Pixel Art by MutterPixel Studio (not included). Font: Be Vietnam Pro, SIL OFL 1.1.

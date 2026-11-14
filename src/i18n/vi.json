@@ -1,0 +1,718 @@
+{
+ "lang": "Tiếng Việt",
+ "ui": {
+  "title": "VƯỢT BÃO SAO HỎA",
+  "subtitle": "Cùng cả đội vượt qua cơn bão bụi khổng lồ",
+  "start": "Bắt đầu nhiệm vụ",
+  "sol": "Ngày",
+  "life": "Sự sống",
+  "power": "Điện",
+  "radiation": "Bức xạ",
+  "o2": "Oxy",
+  "water": "Nước",
+  "food": "Thức ăn",
+  "delay": "Tin nhắn tới Trái Đất mất",
+  "gain": "Được",
+  "lose": "Mất",
+  "next": "Tiếp tục",
+  "confirm": "Xác nhận",
+  "sources": "Dữ liệu này từ đâu?",
+  "close": "Đóng",
+  "min": "phút",
+  "sec": "giây",
+  "waiting": "Đang gọi Trái Đất… chờ câu trả lời",
+  "waitNote": "Câu hỏi bay về Trái Đất rồi câu trả lời bay ngược lại. Ngoài đời mất",
+  "wallTitle": "Bức tường nước",
+  "wallLead": "Mỗi phần nước chỉ làm được một việc: để uống, hoặc che hầm khỏi bức xạ.",
+  "tank": "Nước để uống",
+  "shelter": "Bên trong hầm trú ẩn",
+  "parts": "phần",
+  "inWall": "phần trong tường",
+  "add": "Bơm một phần nước vào tường",
+  "remove": "Rút một phần nước về bồn",
+  "wall0": [
+   "Chưa có tường",
+   "Nước uống dư dả, nhưng bão Mặt Trời tới sẽ rất nguy."
+  ],
+  "wall1": [
+   "Tường mỏng",
+   "Che được một chút, nước uống vẫn nhiều."
+  ],
+  "wall2": [
+   "Tường vừa",
+   "Vừa đủ che, vừa đủ uống."
+  ],
+  "wall3": [
+   "Tường dày",
+   "Rất an toàn, nhưng về sau dễ thiếu nước."
+  ],
+  "dangerLow": "Cẩn thận, đồ dự trữ sắp cạn rồi!",
+  "traveling": "Những ngày trôi qua…",
+  "whatIfEyebrow": "Nếu em chọn khác thì sao?",
+  "whatIfTitle": "Một lựa chọn, hai câu chuyện khác nhau.",
+  "yourPath": "Lựa chọn của em",
+  "otherPath": "Lựa chọn khác",
+  "turning": "Lựa chọn",
+  "tryOther": "Thử quyết định khác",
+  "playAgain": "Chơi lại",
+  "sunToday": "Mặt Trời hôm nay",
+  "langSwitch": "EN",
+  "storm2": "Ngày 24: lại một cơn bão Mặt Trời! Tường nước đã đỡ giúp một phần.",
+  "hiddenNote": "Thật hay giả? Chọn xong em sẽ biết.",
+  "discoveries": "Khám phá",
+  "lifeParts": "Sự sống là mức thấp nhất trong ba thứ này",
+  "chartLife": "Sự sống (%)",
+  "chartDose": "Bức xạ (%)",
+  "rotate": "Xoay ngang điện thoại để chơi nhé.",
+  "storm2Title": "Ngày 24",
+  "sound": "Âm thanh",
+  "skip": "Bỏ qua ▸▸",
+  "tapNext": "Chạm để tiếp tục",
+  "howto": "Cách chơi",
+  "watchIntro": "Xem lại phần mở đầu",
+  "back": "Quay lại",
+  "play": "Chơi",
+  "howtoTitle": "Cách chơi",
+  "howtoLead": "Em chỉ huy một trạm nhỏ trên Sao Hỏa qua 30 ngày bão bụi.",
+  "termHint": "Chạm vào chữ gạch chấm để biết nghĩa.",
+  "solCard": "1 sol = 24 giờ 40 phút",
+  "pickTitle": "Chọn Chỉ huy của em",
+  "pickLead": "Ai sẽ dẫn dắt cả đội? Chọn gương mặt em thích nhé.",
+  "pickGo": "Xuất phát!",
+  "storm2NoWall": "Ngày 24: lại một cơn bão Mặt Trời! Không có tường nước, chỉ còn tường hầm che cho cả đội.",
+  "goodNews": "Tin từ Trái Đất, gửi cách đây {delay}: “Chúng tôi thấy đèn trạm của các bạn. Tàu đón đang tới. Cố lên, còn 6 ngày nữa!”",
+  "skip21": "Ngày 21: hầm không có tường nước nên không có gì để lấy về.",
+  "askMia": "Trái Đất có đang thức không nhỉ?",
+  "nameLabel": "Tên Chỉ huy của em",
+  "namePlaceholder": "Một biệt danh, ví dụ: Sao Mai",
+  "nameNote": "Chỉ lưu trên máy này. Hãy dùng biệt danh, không cần họ tên thật."
+ },
+ "labels": {
+  "real": "Dữ liệu thật",
+  "based": "Dựa trên sự kiện thật",
+  "scenario": "Kịch bản",
+  "game": "Số trong game",
+  "hidden": "?"
+ },
+ "roles": {
+  "commander": "Chỉ huy",
+  "power": "Kỹ sư điện",
+  "life": "Kỹ sư duy trì sự sống",
+  "doctor": "Bác sĩ",
+  "rover": "Tài xế rover",
+  "scientist": "Nhà khoa học",
+  "botanist": "Nhà trồng cây"
+ },
+ "intro": [
+  "Năm 2018, bụi che kín Mặt Trời. Opportunity ngủ mãi không dậy.",
+  "Giờ đến lượt em giữ trạm sáng đèn."
+ ],
+ "sols": {
+  "4": {
+   "bulletin": "Một [[orbiter|tàu bay quanh Sao Hỏa]] vừa thấy bão bụi đang lớn dần.",
+   "a": {
+    "who": "doctor",
+    "line": "Bụi chỉ lấy điện, không hại người. Xây tường ngay đi!"
+   },
+   "b": {
+    "who": "life",
+    "line": "Giữ nước để uống chứ. Hôm nay Mặt Trời vẫn yên."
+   },
+   "cards": {},
+   "after": {
+    "default": "Bụi chỉ che nắng. [[waterWall|Tường nước]] mới chắn được [[radiation|bức xạ]] từ Mặt Trời."
+   },
+   "react": {
+    "default": [
+     "botanist",
+     "Sao nước không làm được cả hai việc ạ?"
+    ]
+   }
+  },
+  "8": {
+   "bulletin": "Bão bụi đang tới gần. Vẫn còn kịp ra ngoài một chuyến.",
+   "a": {
+    "who": "rover",
+    "line": "Đi lấy băng thôi, kẻo hết nước uống!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Ở lại đo bụi đi, hiếm lắm mới có!"
+   },
+   "cards": {
+    "ice": [
+     "Ra lấy băng",
+     "Thêm nước để uống",
+     "Tốn điện, ra ngoài nhận thêm bức xạ"
+    ],
+    "bags": [
+     "Đắp bao đất",
+     "Tường dày hơn mà không tốn nước",
+     "Tốn điện, ra ngoài nhận thêm bức xạ"
+    ],
+    "science": [
+     "Làm thí nghiệm",
+     "Một khám phá mới",
+     "Không thêm nước, không thêm tường"
+    ]
+   },
+   "after": {
+    "ice": "Cả đội mang [[ice|băng]] về. Nhưng ở ngoài, ai cũng nhận thêm [[radiation|bức xạ]].",
+    "bags": "Tường dày thêm rồi. Nhưng ở ngoài, ai cũng nhận thêm [[radiation|bức xạ]].",
+    "science": "Ở trong trạm thì an toàn, nhưng nước không nhiều thêm."
+   },
+   "react": {
+    "ice": [
+     "rover",
+     "Lấy được rồi! Giày đầy bụi nhưng bồn đầy hơn."
+    ],
+    "bags": [
+     "life",
+     "Nặng ghê, nhưng tường dày hơn rồi!"
+    ],
+    "science": [
+     "scientist",
+     "Nhìn hạt bụi dưới kính hiển vi này!"
+    ]
+   }
+  },
+  "11": {
+   "bulletin": "Bụi đã che Mặt Trời. Tấm pin gần như không còn nắng.",
+   "a": {
+    "who": "power",
+    "line": "Dồn hết điện cho sưởi ấm và tạo khí thở!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Bão này hiếm lắm. Giữ chút điện để nghiên cứu!"
+   },
+   "cards": {
+    "safety": [
+     "Dồn hết điện cho an toàn",
+     "Ấm áp, đủ khí thở hôm nay",
+     "Pin tụt rất nhanh"
+    ],
+    "science": [
+     "Giữ một ít cho khoa học",
+     "Một khám phá mới",
+     "Ít điện hơn cho an toàn"
+    ],
+    "reserve": [
+     "Để dành cho mai sau",
+     "Pin dùng được lâu hơn",
+     "Trạm lạnh hơn, ít khí thở hơn"
+    ]
+   },
+   "after": {
+    "default": "Bụi càng dày, [[panels|tấm pin]] càng ít điện."
+   },
+   "react": {
+    "safety": [
+     "power",
+     "Bật sưởi rồi. Mọi người giữ áo khoác bên mình nhé."
+    ],
+    "science": [
+     "scientist",
+     "Cảm ơn Chỉ huy! Dữ liệu này quý như vàng."
+    ],
+    "reserve": [
+     "life",
+     "Brr! Hơi lạnh, nhưng pin sẽ bền."
+    ]
+   }
+  },
+  "14": {
+   "bulletin": "Opportunity đã im lặng. [[dustLevel|Độ mờ bụi]] lên tới 10,8!",
+   "a": {
+    "who": "botanist",
+    "line": "Tắt đèn là vườn ngừng ra rau đấy!"
+   },
+   "b": {
+    "who": "power",
+    "line": "Đèn vườn ngốn nhiều điện quá!"
+   },
+   "cards": {
+    "keep": [
+     "Giữ đèn vườn",
+     "Vườn vẫn ra rau",
+     "Ngày nào cũng tốn điện"
+    ],
+    "dim": [
+     "Giảm nửa đèn",
+     "Vẫn có rau, đỡ tốn điện",
+     "Rau lớn chậm"
+    ],
+    "off": [
+     "Tắt đèn vườn",
+     "Tiết kiệm điện",
+     "Có thể thiếu ăn"
+    ]
+   },
+   "after": {
+    "keep": "[[greenhouse|Nhà kính]] vẫn ra rau, nhưng ngày nào cũng tốn điện.",
+    "off": "Không đèn thì rau không lớn. Từ giờ phải ăn dè sẻn.",
+    "source": "Opportunity chạy bằng nắng. Không có nắng, nó không sạc được.",
+    "dim": "Nửa ánh sáng, nửa phần rau. Một lựa chọn ở giữa."
+   },
+   "react": {
+    "keep": [
+     "botanist",
+     "Cảm ơn ạ! Đậu vẫn đang lớn."
+    ],
+    "dim": [
+     "botanist",
+     "Rau sẽ lớn chậm thôi, nhưng vẫn lớn."
+    ],
+    "off": [
+     "botanist",
+     "Ngủ ngon nhé, mấy cây rau."
+    ]
+   }
+  },
+  "17": {
+   "bulletin": "Bíp bíp! Máy đo [[radiation|bức xạ]] nhảy vọt. [[solarStorm|Bão Mặt Trời]] chăng?",
+   "a": {
+    "who": "doctor",
+    "line": "Vào hầm ngay! Đừng chờ nữa!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Hỏi Trái Đất trước đã. Biết đâu báo động giả!"
+   },
+   "cards": {
+    "shelter": [
+     "Vào hầm ngay",
+     "An toàn nhất nếu bão thật",
+     "Báo động giả thì tốn điện"
+    ],
+    "ask": [
+     "Hỏi Trái Đất",
+     "Biết chắc thật hay giả",
+     "Tin nhắn đi một chiều: {delay}"
+    ]
+   },
+   "after": {
+    "real": "Bão thật! Những hạt nhanh nhất ập tới trước cả câu trả lời.",
+    "false": "Chỉ là [[falseAlarm|báo động giả]]. Lần này hỏi trước nên đỡ tốn điện.",
+    "source": "Tháng 9/2017, bức xạ trên Sao Hỏa đã thật sự tăng hơn gấp đôi.",
+    "falseShelter": "Chỉ là [[falseAlarm|báo động giả]]. Máy sưởi trong [[shelter|hầm]] đã tốn điện vô ích.",
+    "clueWrong": "Lần này manh mối đã sai. Manh mối tốt đôi khi cũng đánh lừa mình."
+   },
+   "bulletinBoth": "Bíp bíp! Cả hai máy đo [[radiation|bức xạ]] cùng nhảy vọt!",
+   "bulletinOne": "Bíp! Một máy đo [[radiation|bức xạ]] nhảy, nhưng máy kia vẫn im.",
+   "react": {
+    "shelter": [
+     "doctor",
+     "Mọi người vào hết! Đóng cửa hầm!"
+    ],
+    "ask": [
+     "scientist",
+     "Đã gửi tin. Giờ thì chờ thôi…"
+    ],
+    "shelterFalse": [
+     "doctor",
+     "Cẩn thận vẫn hơn. Lần sau mình xem kỹ máy đo nhé."
+    ]
+   }
+  },
+  "21": {
+   "bulletin": "Bồn nước gần cạn rồi, mà bụi vẫn chưa tan.",
+   "a": {
+    "who": "life",
+    "line": "Lấy nước từ tường về uống đi!"
+   },
+   "b": {
+    "who": "doctor",
+    "line": "Lỡ lại có bão Mặt Trời thì sao?"
+   },
+   "cards": {
+    "keep": [
+     "Giữ nguyên tường",
+     "Vẫn được che chắn",
+     "Có thể thiếu nước"
+    ],
+    "drain": [
+     "Lấy nước về",
+     "Thêm nước để uống",
+     "Tường mỏng đi"
+    ]
+   },
+   "after": {
+    "default": "Một phần nước không thể vừa để uống, vừa làm tường."
+   },
+   "bulletinFull": "Bụi vẫn chưa tan. Có còn cần bức tường nước không?",
+   "aFull": "Nước vẫn còn dư. Có lấy bớt về không?",
+   "bFull": "Cứ giữ tường. Biết đâu lại có bão.",
+   "react": {
+    "keep": [
+     "doctor",
+     "Mọi người uống từng ngụm nhỏ nhé. Tường giữ nguyên."
+    ],
+    "drain": [
+     "life",
+     "Nước mát cho cả đội đây!"
+    ],
+    "keepFull": [
+     "doctor",
+     "Nước vẫn đủ. Tường giữ nguyên."
+    ]
+   }
+  },
+  "26": {
+   "bulletin": "Cơn bão giờ đã phủ kín cả hành tinh.",
+   "a": {
+    "who": "power",
+    "line": "Ra lau tấm pin đi, được chút điện nào quý chút ấy!"
+   },
+   "b": {
+    "who": "scientist",
+    "line": "Còn chút điện, làm thí nghiệm cuối nhé!"
+   },
+   "cards": {
+    "clean": [
+     "Ra lau tấm pin",
+     "Thêm một chút điện",
+     "Ra ngoài nhận thêm bức xạ, nắng vẫn yếu"
+    ],
+    "burst": [
+     "Thí nghiệm cuối",
+     "Một khám phá mới",
+     "Tấm pin vẫn bám bụi"
+    ]
+   },
+   "after": {
+    "default": "Pin sạch vẫn cần nắng, mà bụi sẽ còn ở đây nhiều tuần nữa."
+   },
+   "react": {
+    "clean": [
+     "power",
+     "Pin sáng bóng! Chút nắng nào cũng quý."
+    ],
+    "burst": [
+     "scientist",
+     "Lưu xong lần đo cuối. Mình vừa làm nên lịch sử!"
+    ]
+   }
+  }
+ },
+ "end": {
+  "rescued": "Trái Đất gửi tàu đón sớm. Cả đội an toàn, nhưng trạm phải đóng cửa.",
+  "why": {
+   "o2": "Ngày {sol}: trạm thiếu khí thở.",
+   "water": "Ngày {sol}: trạm hết nước.",
+   "food": "Ngày {sol}: trạm hết thức ăn.",
+   "dose": "Ngày {sol}: cả đội nhận quá nhiều bức xạ."
+  },
+  "realLife": "Ngoài đời, cơn bão này còn kéo dài thêm nhiều tuần.",
+  "sunQ": "Nếu em ở trạm hôm nay, em có vào hầm không?",
+  "sunLoading": "Đang hỏi DONKI của NASA…",
+  "sunCount": "DONKI ghi nhận {n} đợt hạt năng lượng cao từ Mặt Trời trong 30 ngày qua.",
+  "sunNone": "DONKI không ghi nhận đợt hạt năng lượng cao nào từ Mặt Trời trong 30 ngày qua.",
+  "sunFail": "Chưa kết nối được DONKI. Xem trực tiếp tại trang của NASA.",
+  "decisionNames": {
+   "4": "Ngày 4 · Tường nước",
+   "8": "Ngày 8 · Ra ngoài",
+   "11": "Ngày 11 · Chia điện",
+   "14": "Ngày 14 · Khu vườn",
+   "17": "Ngày 17 · Bão Mặt Trời",
+   "21": "Ngày 21 · Thiếu nước",
+   "26": "Ngày 26 · Lựa chọn cuối"
+  },
+  "endings": {
+   "radiation": "Cả đội đều về được, nhưng đã nhận khá nhiều bức xạ.",
+   "explorers": "Cứu hộ đã tới, và em đã có những khám phá tuyệt vời!",
+   "strong": "Cứu hộ đã tới. Cả đội khỏe mạnh, đồ dự trữ vẫn còn dư.",
+   "close": "Cứu hộ đã tới, vừa kịp lúc!"
+  },
+  "failTitle": "Nhiệm vụ kết thúc sớm.",
+  "keyChoice": "Lựa chọn tạo khác biệt lớn nhất: {name} · {option}",
+  "oppy": "Opportunity thật đã không bao giờ tỉnh lại. Ngày 13/2/2019, NASA chào tạm biệt nó sau 15 năm trên Sao Hỏa.",
+  "oppyWin": "Đội của em đã giữ cho đèn trạm sáng.",
+  "oppyFail": "Đội của em đã về nhà an toàn.",
+  "oppyTitle": "Nhớ về Opportunity",
+  "closeTitle": "Suýt nữa thôi!",
+  "closeWhy": {
+   "o2": "Tàu đáp xuống đúng Ngày 30, khi khí thở vừa cạn. Cả đội an toàn.",
+   "water": "Tàu đáp xuống đúng Ngày 30, khi nước vừa cạn. Cả đội an toàn.",
+   "food": "Tàu đáp xuống đúng Ngày 30, khi thức ăn vừa cạn. Cả đội an toàn.",
+   "dose": "Tàu đáp xuống đúng Ngày 30, khi bức xạ vừa vượt mức. Cả đội an toàn."
+  },
+  "oppyNeed": "Để thức dậy, nó cần độ mờ bụi giảm xuống dưới 2.",
+  "missionCode": "Mã nhiệm vụ {code}: mở game với ?seed={code} để chơi lại cơn bão này."
+ },
+ "sources": {
+  "title": "Dữ liệu này từ đâu?",
+  "kid": "Trạm này là giả định. Số bụi lấy từ Opportunity, số bức xạ lấy từ Curiosity. Hai rover ở hai nơi khác nhau.",
+  "labels": {
+   "real": "NASA đo được.",
+   "based": "Có thật, nhưng được đặt vào ngày khác.",
+   "scenario": "Tình huống do nhóm viết.",
+   "game": "Con số để trò chơi cân bằng."
+  },
+  "notes": [
+   "Cơn bão thật kéo dài hàng tháng. Trò chơi nén lại còn 30 ngày.",
+   "Độ mờ bụi 10,8 ngày 10/6/2018 là số thật. Các ngày khác là số game; bụi vẫn dày, như ngoài đời kéo dài nhiều tuần.",
+   "Thanh Bức xạ là ngân sách liều của trò chơi, không phải giới hạn thật của NASA.",
+   "Năm 2018 Mặt Trời khá yên. Bão Mặt Trời trong game dựa trên sự kiện tháng 9/2017.",
+   "Độ trễ tin nhắn lấy từ JPL Horizons cho đúng từng ngày.",
+   "Số bụi lấy từ Opportunity ở đồng bằng Meridiani. Số bức xạ lấy từ Curiosity ở hố Gale, cách rất xa.",
+   "Ngày tháng tính theo lịch Trái Đất năm 2018. Mỗi ngày trong game ứng với một sol, dài hơn 40 phút."
+  ],
+  "words": [
+   [
+    "Sol",
+    "Một ngày trên Sao Hỏa, dài 24 giờ 40 phút. Các nhà khoa học gọi là sol."
+   ],
+   [
+    "Bức xạ",
+    "Những hạt tí hon bay cực nhanh từ vũ trụ, xuyên qua mọi thứ. Nhận nhiều quá sẽ hại sức khỏe."
+   ],
+   [
+    "Bão Mặt Trời",
+    "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc."
+   ],
+   [
+    "Độ mờ bụi",
+    "Bụi dày cỡ nào. 1 là hơi mờ. 10 là giữa trưa mà gần như tối om."
+   ],
+   [
+    "Hầm trú ẩn",
+    "Căn phòng nhỏ tường dày, nơi cả đội trốn bức xạ."
+   ],
+   [
+    "Tường nước",
+    "Nước chắn bức xạ rất giỏi. Xếp các bồn nước quanh hầm thành một bức tường."
+   ]
+  ],
+  "dataTitle": "Dữ liệu",
+  "creditsTitle": "Ghi công",
+  "data": [
+   [
+    "Độ mờ bụi cuối cùng của Opportunity, 10,8 ngày 10/6/2018: NASA/JPL",
+    "https://www.jpl.nasa.gov/news/six-things-about-opportunitys-recovery-efforts/"
+   ],
+   [
+    "Opportunity kết thúc sứ mệnh ngày 13/2/2019: NASA/JPL",
+    "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   ],
+   [
+    "Bức xạ trên Sao Hỏa tháng 9/2017: Curiosity RAD, Zeitlin và cộng sự 2018",
+    "https://doi.org/10.1029/2018GL077760"
+   ],
+   [
+    "Khoảng cách Trái Đất – Sao Hỏa từng ngày: JPL Horizons",
+    "https://ssd.jpl.nasa.gov/horizons/"
+   ],
+   [
+    "Bão Mặt Trời hôm nay: NASA DONKI (CCMC)",
+    "https://ccmc.gsfc.nasa.gov/DONKI/"
+   ],
+   [
+    "Bụi phủ toàn hành tinh sau tháng 6/2018: Montabone và cộng sự 2020",
+    "https://doi.org/10.1029/2019JE006111"
+   ]
+  ],
+  "credits": [
+   "Chân dung nhân vật: Cozy Space Portraits của Bramble & Byte",
+   "Icon: Cozy Space Icons & UI của Bramble & Byte",
+   "Trạm, đá, bồn nước: Mars Base Pixel Art của MutterPixel Studio",
+   "Cảnh trạm: nhóm Vượt Bão Sao Hỏa ghép từ các sprite trên",
+   "Phông chữ: Be Vietnam Pro (giấy phép SIL Open Font License 1.1)",
+   "Mã nguồn: nhóm Vượt Bão Sao Hỏa, giấy phép MIT"
+  ]
+ },
+ "cutscene": [
+  {
+   "k": "space",
+   "text": "Đây là Sao Hỏa, hành tinh đỏ. Năm ấy là 2018."
+  },
+  {
+   "k": "clear",
+   "text": "Một sáng tháng Sáu, một đám [[dust|bụi]] nhỏ bắt đầu lớn dần."
+  },
+  {
+   "k": "storm",
+   "text": "Nó cứ lớn mãi, đến khi bụi che kín Mặt Trời khắp Sao Hỏa."
+  },
+  {
+   "k": "signal",
+   "text": "Opportunity, chú [[rover|robot]] chạy bằng nắng, chìm vào giấc ngủ và không bao giờ tỉnh lại."
+  },
+  {
+   "k": "crew",
+   "text": "Giờ hãy tưởng tượng có một đội thám hiểm đang sống trên Sao Hỏa mùa hè năm ấy."
+  },
+  {
+   "k": "commander",
+   "text": "Em là Chỉ huy của họ. Hãy giữ cả đội an toàn trong 30 ngày."
+  },
+  {
+   "k": "sol",
+   "text": "Một ngày trên Sao Hỏa gọi là [[sol|sol]], dài hơn ngày của mình 40 phút."
+  },
+  {
+   "k": "logo",
+   "text": "Mỗi lựa chọn đều có cái giá. Sẵn sàng chưa, Chỉ huy?"
+  }
+ ],
+ "howto": [
+  {
+   "icon": "signal",
+   "title": "1. Đọc bản tin",
+   "text": "Mỗi lựa chọn bắt đầu bằng một bản tin và hai người có ý khác nhau."
+  },
+  {
+   "icon": "check",
+   "title": "2. Chọn một thẻ",
+   "text": "Mỗi thẻ ghi rõ em được gì và mất gì."
+  },
+  {
+   "icon": "heart",
+   "title": "3. Để ý các thanh",
+   "text": "Sự sống (chạm để xem oxy, nước, thức ăn) và Điện: giữ cao. Bức xạ: giữ thấp."
+  },
+  {
+   "icon": "water",
+   "title": "4. Nước chỉ làm một việc",
+   "text": "Nước để uống hoặc để xây tường chắn bức xạ, không thể cả hai."
+  },
+  {
+   "icon": "rocket",
+   "title": "5. Trái Đất rất xa",
+   "text": "Tin nhắn tới Trái Đất mất vài phút. Có lúc em phải tự quyết."
+  },
+  {
+   "icon": "star",
+   "title": "6. Thật hay game?",
+   "text": "Nhãn cho biết đâu là dữ liệu thật của NASA, đâu là số game."
+  },
+  {
+   "icon": "flask",
+   "title": "7. Từ khó",
+   "text": "Chạm vào chữ gạch chấm để biết nghĩa."
+  },
+  {
+   "icon": "crew",
+   "title": "8. Về tới ngày 30",
+   "text": "Giữ cả đội an toàn tới khi cứu hộ đến. Rồi xem một lựa chọn khác sẽ đổi gì."
+  }
+ ],
+ "glossary": {
+  "sol": "Một ngày trên Sao Hỏa, dài 24 giờ 40 phút. Các nhà khoa học gọi là sol.",
+  "radiation": "Những hạt tí hon bay cực nhanh từ vũ trụ, xuyên qua mọi thứ. Nhận nhiều quá sẽ hại sức khỏe.",
+  "solarStorm": "Khi Mặt Trời bất ngờ phun ra thật nhiều bức xạ cùng một lúc.",
+  "dust": "Bão bụi Sao Hỏa có thể phủ kín cả hành tinh. Bụi che nắng nhưng không mang bức xạ.",
+  "dustLevel": "Bụi dày cỡ nào. 1 là hơi mờ. 10 là giữa trưa mà gần như tối om.",
+  "rover": "Xe robot chạy khắp Sao Hỏa để nghiên cứu.",
+  "orbiter": "Tàu vũ trụ bay vòng quanh Sao Hỏa, chụp ảnh từ trên cao.",
+  "shelter": "Căn phòng nhỏ tường dày, nơi cả đội trốn bức xạ.",
+  "waterWall": "Nước chắn bức xạ rất giỏi. Xếp các bồn nước quanh hầm thành một bức tường.",
+  "panels": "Tấm pin mặt trời biến ánh nắng thành điện.",
+  "greenhouse": "Khu vườn kính, nơi cả đội trồng rau dưới ánh đèn.",
+  "delay": "Tin nhắn bay nhanh như ánh sáng, nhưng Sao Hỏa xa quá nên vẫn mất vài phút.",
+  "oxygen": "Khí để thở. Trạm dùng điện để tạo ra nó.",
+  "falseAlarm": "Khi chuông báo kêu nhưng thật ra chẳng có gì nguy hiểm.",
+  "ice": "Dưới đất Sao Hỏa có nước đóng băng. Làm tan ra là uống được."
+ },
+ "report": {
+  "button": "Báo cáo nhiệm vụ",
+  "title": "Báo cáo nhiệm vụ",
+  "lead": "Trò chơi đã thử lại nhiệm vụ của em với mọi lựa chọn khác, chỉ dựa trên những gì em biết lúc chọn.",
+  "criteria": {
+   "safety": {
+    "name": "An toàn cả đội",
+    "1": "Lần này cả đội cần tàu cứu hộ.",
+    "2": "Cả đội đều về được, vừa sát nút.",
+    "3": "Cả đội đều về được, đồ dự trữ vẫn còn dư."
+   },
+   "radiation": {
+    "name": "Né bức xạ",
+    "1": "Cả đội đã nhận khá nhiều bức xạ.",
+    "2": "Có nhận bức xạ, nhưng chưa nhiều.",
+    "3": "Bức xạ rất thấp. Che chắn quá giỏi!"
+   },
+   "science": {
+    "name": "Khám phá",
+    "1": "Ưu tiên an toàn, ít thời gian cho khoa học.",
+    "2": "Có kha khá khám phá.",
+    "3": "Những khám phá tuyệt vời!"
+   },
+   "wise": {
+    "name": "Lựa chọn khôn ngoan",
+    "1": "{n}/{m} lựa chọn là tốt nhất lúc đó.",
+    "2": "{n}/{m} lựa chọn là tốt nhất lúc đó.",
+    "3": "{n}/{m} lựa chọn là tốt nhất lúc đó!"
+   }
+  },
+  "best": "Lựa chọn hay nhất",
+  "rethink": "Thử lại xem sao",
+  "instead": "“{other}” thay vì “{chosen}”",
+  "effect": {
+   "saved": "Nếu không có nó, trạm đã gặp nạn ở ngày {sol}.",
+   "dose": "Nó giúp cả đội bớt {n}% bức xạ.",
+   "life": "Nó giữ lại thêm {n}% đồ dự trữ.",
+   "sci": "Nó mang về thêm {n} khám phá."
+  },
+  "maybe": {
+   "saved": "Có thể đã giúp trạm vượt qua ngày {sol}.",
+   "dose": "Có thể đã bớt {n}% bức xạ.",
+   "life": "Có thể còn thêm {n}% đồ dự trữ.",
+   "sci": "Có thể có thêm {n} khám phá."
+  },
+  "allBest": "Mọi lựa chọn của em đều đã là tốt nhất. Quá đỉnh!",
+  "badgeTitle": "Huy hiệu của em",
+  "badges": {
+   "scientist": [
+    "Nhà khoa học nhí",
+    "Em vẫn dành thời gian nghiên cứu cơn bão."
+   ],
+   "wallBuilder": [
+    "Thợ xây tường",
+    "Em xây tường nước thật chắc ngay từ đầu."
+   ],
+   "careful": [
+    "Chỉ huy cẩn thận",
+    "Khi chuông báo kêu, em lo cho cả đội trước tiên."
+   ],
+   "gardener": [
+    "Người làm vườn vũ trụ",
+    "Em giữ cho khu vườn lớn lên cả trong bóng tối."
+   ],
+   "explorer": [
+    "Nhà thám hiểm gan dạ",
+    "Em dám ra ngoài để mang băng về."
+   ],
+   "brave": [
+    "Chỉ huy dũng cảm",
+    "Em đưa ra những quyết định khó và học từ chúng."
+   ]
+  },
+  "seeWhatIf": "Xem trong Nếu chọn khác",
+  "wall": "{n} phần trong tường"
+ },
+ "names": {
+  "captain-ada": "Ada",
+  "engineer-rosa": "Rosa",
+  "mechanic-gus": "Gus",
+  "doctor-lin": "Lin",
+  "pilot-kai": "Kai",
+  "officer-noor": "Noor",
+  "cadet-mia": "Mia",
+  "robot-b0t": "B0T",
+  "alien-zib": "Zib"
+ },
+ "cert": {
+  "button": "Tải giấy chứng nhận",
+  "making": "Đang tạo giấy chứng nhận…",
+  "titleWin": "Chứng nhận Hoàn thành Nhiệm vụ",
+  "titleBrave": "Chứng nhận Chỉ huy Dũng cảm",
+  "awarded": "Chứng nhận này được trao cho",
+  "didWin": "đã chỉ huy trạm Sao Hỏa vượt qua cơn bão bụi lớn năm 2018 và đưa cả đội về an toàn.",
+  "didBrave": "đã chỉ huy trạm Sao Hỏa trong cơn bão bụi lớn năm 2018 và giữ cả đội an toàn.",
+  "commander": "Chỉ huy",
+  "badge": "Huy hiệu",
+  "code": "Mã nhiệm vụ",
+  "date": "Ngày",
+  "footer": "Dự án NASA Space Apps Challenge 2026. Đây là chứng nhận trong trò chơi, không phải giấy tờ chính thức của NASA."
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Mars Storm Crew",
+  "short_name": "Storm Crew",
+  "start_url": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0b0e20",
+  "theme_color": "#151a33",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
