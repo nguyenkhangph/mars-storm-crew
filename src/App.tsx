@@ -89,6 +89,12 @@ export default function App() {
   useEffect(() => {
     if (phase !== 'travel') return;
     const id = setTimeout(() => {
+      // the day-24 storm (or good news) is always shown, even if the station fails that day
+      if (sol === P.sep2Sol && !seenStorm2 && (luck.secondStorm || !run.fail)) {
+        setSeenStorm2(true);
+        setEventKind(luck.secondStorm ? 'storm2' : 'news');
+        return setPhase('event');
+      }
       if (run.fail) return setPhase('end');
       if (sol >= target) {
         if (target === LAST_SOL) return setPhase('end');
@@ -99,11 +105,6 @@ export default function App() {
           return setPhase('event');
         }
         return setPhase('decide');
-      }
-      if (sol === P.sep2Sol && !seenStorm2) {
-        setSeenStorm2(true);
-        setEventKind(luck.secondStorm ? 'storm2' : 'news');
-        return setPhase('event');
       }
       sfx.tick();
       setSol(sol + 1);
@@ -150,7 +151,7 @@ export default function App() {
   useEffect(() => { if (ending) (ending === 'win' ? sfx.chime : sfx.sad)(); }, [ending]);
   const lastRow = full.rows.at(-1);
   const endingText = !full.fail && lastRow ? t.end.endings[endingFor(lastRow)]
-    : full.fail && full.fail.sol >= LAST_SOL ? t.end.closeTitle : t.end.failTitle;
+    : full.fail && full.fail.sol >= LAST_SOL ? `${t.end.closeTitle} ${t.end.closeWhy[full.fail.kind]}` : t.end.failTitle;
   const cert = phase === 'end' || phase === 'report'
     ? <CertButton t={t} lang={lang} name={cmdName} look={look} choices={choices} luck={luck} code={seed} won={!full.fail} ending={endingText} />
     : null;

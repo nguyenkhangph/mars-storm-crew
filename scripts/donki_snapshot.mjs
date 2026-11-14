@@ -7,8 +7,8 @@ const end = new Date();
 const d = (x) => x.toISOString().slice(0, 10);
 const q = `startDate=${d(new Date(end.getTime() - 30 * 864e5))}&endDate=${d(end)}`;
 const servers = [
-  (t) => `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/${t}?${q}`,
   (t) => `https://ccmc.gsfc.nasa.gov/DONKI-API/get/${t}?${q}`,
+  (t) => `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/${t}?${q}`,
   (t) => `https://api.nasa.gov/DONKI/${t}?${q}&api_key=DEMO_KEY`,
 ];
 const get = async (u) => {
@@ -24,7 +24,7 @@ for (const s of servers) {
     const mars = new Set();
     arr(enlil).forEach((x, i) => {
       if (!arr(x.impactList).some((h) => /mars/i.test(h.location ?? ''))) return;
-      const ids = arr(x.cmeInputs).map((c) => c.associatedCMEID).filter(Boolean);
+      const ids = arr(x.cmeInputs).map((c) => c.CMEID ?? c.associatedCMEID).filter(Boolean);
       (ids.length ? ids : [`sim-${i}`]).forEach((id) => mars.add(id));
     });
     const snap = {

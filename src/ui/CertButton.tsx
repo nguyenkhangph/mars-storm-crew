@@ -11,8 +11,10 @@ export function CertButton({ t, lang, name, look, choices, luck, code, won, endi
   t: Strings; lang: Lang; name: string; look: Look; choices: Choices; luck: Luck; code: number; won: boolean; ending: string; className?: string;
 }) {
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
   const go = async () => {
     setBusy(true);
+    setFailed(false);
     try {
       const now = new Date();
       const blob = await makeCertificate({
@@ -20,13 +22,18 @@ export function CertButton({ t, lang, name, look, choices, luck, code, won, endi
         dateText: formatDate(new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())), lang),
       });
       saveBlob(blob, `mars-storm-crew-${code}.png`);
+    } catch {
+      setFailed(true);
     } finally {
       setBusy(false);
     }
   };
   return (
-    <button type="button" className={className} onClick={go} disabled={busy}>
-      🏅 {busy ? t.cert.making : t.cert.button}
-    </button>
+    <>
+      <button type="button" className={className} onClick={go} disabled={busy}>
+        🏅 {busy ? t.cert.making : t.cert.button}
+      </button>
+      {failed && <p className="cert-fail" role="alert">{t.cert.fail}</p>}
+    </>
   );
 }

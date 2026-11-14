@@ -19,7 +19,6 @@
   "sources": "Dữ liệu này từ đâu?",
   "close": "Đóng",
   "min": "phút",
-  "sec": "giây",
   "waiting": "Đang gọi Trái Đất… chờ câu trả lời",
   "waitNote": "Câu hỏi bay về Trái Đất rồi câu trả lời bay ngược lại. Ngoài đời mất",
   "wallTitle": "Bức tường nước",
@@ -64,7 +63,6 @@
   "chartLife": "Sự sống (%)",
   "chartDose": "Bức xạ (%)",
   "rotate": "Xoay ngang điện thoại để chơi nhé.",
-  "storm2Title": "Ngày 24",
   "sound": "Âm thanh",
   "skip": "Bỏ qua ▸▸",
   "tapNext": "Chạm để tiếp tục",
@@ -74,7 +72,6 @@
   "play": "Chơi",
   "howtoTitle": "Cách chơi",
   "howtoLead": "Em chỉ huy một trạm nhỏ trên Sao Hỏa qua 30 ngày bão bụi.",
-  "termHint": "Chạm vào chữ gạch chấm để biết nghĩa.",
   "solCard": "1 sol = 24 giờ 40 phút",
   "pickTitle": "Chọn Chỉ huy của em",
   "pickLead": "Ai sẽ dẫn dắt cả đội? Chọn gương mặt em thích nhé.",
@@ -85,7 +82,8 @@
   "askMia": "Trái Đất có đang thức không nhỉ?",
   "nameLabel": "Tên Chỉ huy của em",
   "namePlaceholder": "Một biệt danh, ví dụ: Sao Mai",
-  "nameNote": "Chỉ lưu trên máy này. Hãy dùng biệt danh, không cần họ tên thật."
+  "nameNote": "Chỉ lưu trên máy này. Hãy dùng biệt danh, không cần họ tên thật.",
+  "sec": "giây"
  },
  "labels": {
   "real": "Dữ liệu thật",
@@ -403,7 +401,6 @@
    "food": "Ngày {sol}: trạm hết thức ăn.",
    "dose": "Ngày {sol}: cả đội nhận quá nhiều bức xạ."
   },
-  "realLife": "Ngoài đời, cơn bão này còn kéo dài thêm nhiều tuần.",
   "sunQ": "Nếu em ở trạm hôm nay, em có vào hầm không?",
   "sunLoading": "Đang hỏi DONKI của NASA…",
   "sunCount": "Số đợt bão bức xạ ghi nhận: {n}.",
@@ -420,7 +417,7 @@
   },
   "endings": {
    "radiation": "Cả đội đều về được, nhưng đã nhận khá nhiều bức xạ.",
-   "explorers": "Cứu hộ đã tới, và em đã có những khám phá tuyệt vời!",
+   "explorers": "Cứu hộ đã tới, và cả đội đã có những khám phá tuyệt vời!",
    "strong": "Cứu hộ đã tới. Cả đội khỏe mạnh, đồ dự trữ vẫn còn dư.",
    "close": "Cứu hộ đã tới, vừa kịp lúc!"
   },
@@ -438,9 +435,9 @@
    "dose": "Tàu đáp xuống đúng Ngày 30, khi bức xạ vừa vượt mức. Cả đội an toàn."
   },
   "oppyNeed": "Để thức dậy, nó cần độ mờ bụi giảm xuống dưới 2.",
-  "missionCode": "Mã nhiệm vụ {code}: mở game với ?seed={code} để chơi lại cơn bão này.",
+  "missionCode": "Mã nhiệm vụ {code}. Chơi lại cơn bão này: {link}",
   "sunFlares": "Trong 30 ngày qua, Mặt Trời có {f} lần bùng sáng mạnh.",
-  "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời bay tới Sao Hỏa (dự báo)."
+  "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời sẽ bay tới Sao Hỏa."
  },
  "sources": {
   "title": "Dữ liệu này từ đâu?",
@@ -514,16 +511,16 @@
     "https://doi.org/10.1029/2019JE006111"
    ],
    [
-    "Bức xạ trên Sao Hỏa từng giờ từ 2012: Curiosity RAD, NASA OSDR RadLab",
-    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
-   ],
-   [
     "Cơn bão Mặt Trời tháng 9/2017 trong DONKI (bùng sáng X8.2, 10/9/2017)",
     "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1"
    ],
    [
     "Vị trí Opportunity (Meridiani) và Curiosity (Gale): NASA Mars Trek",
     "https://trek.nasa.gov/mars/"
+   ],
+   [
+    "Bức xạ trên Sao Hỏa do Curiosity đo: số liệu RAD trong NASA OSDR RadLab",
+    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
    ]
   ],
   "credits": [
@@ -735,6 +732,7 @@
   "badge": "Huy hiệu",
   "code": "Mã nhiệm vụ",
   "date": "Ngày",
-  "footer": "Dự án NASA Space Apps Challenge 2026. Đây là chứng nhận trong trò chơi, không phải giấy tờ chính thức của NASA."
+  "footer": "Dự án NASA Space Apps Challenge 2026. Đây là chứng nhận trong trò chơi, không phải giấy tờ chính thức của NASA.",
+  "fail": "Chưa tải được giấy chứng nhận. Thử lại nhé!"
  }
 }

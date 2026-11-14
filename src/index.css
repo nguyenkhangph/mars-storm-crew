@@ -545,6 +545,8 @@ body { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -w
 .ask-mia .bubble { color: var(--ink); }
 .end-code { margin: 4px 0 8px; font-size: 13px; color: var(--muted); }
 .compact .end-code { font-size: 16px; }
+.end-code a { color: var(--teal, #6fd3c2); text-decoration: underline; }
+.cert-fail { flex-basis: 100%; margin: 4px 0 0; color: #ff8a80; font-size: 14px; }
 
 /* ===== v2.2 name + certificate ===== */
 .pick-name { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0 0 12px; }

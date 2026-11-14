@@ -10,7 +10,21 @@ import { DONKI_SERVERS, donkiQuery, summarize, type SunSummary } from '../data/d
 const CACHE = 'solcrew.donki2';
 type Sun = SunSummary & { cached?: boolean };
 
-async function getJson(url: string, signal: AbortSignal): Promise<unknown> {
+async function getJson(url: string, signal: AbortSignal, ms = 6000): Promise<unknown> {
+  // give up on a slow server after a few seconds and try the next one
+  const ctl = new AbortController();
+  const stop = () => ctl.abort();
+  signal.addEventListener('abort', stop);
+  const timer = setTimeout(stop, ms);
+  try {
+    return await readJson(url, ctl.signal);
+  } finally {
+    clearTimeout(timer);
+    signal.removeEventListener('abort', stop);
+  }
+}
+
+async function readJson(url: string, signal: AbortSignal): Promise<unknown> {
   const r = await fetch(url, { signal });
   if (!r.ok) throw new Error(String(r.status));
   const text = await r.text();
@@ -93,7 +107,7 @@ export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, o
           <span><Icon name="shield" size={28} />{Math.round(Math.min(100, last?.dose ?? 0))}%<small>{t.ui.radiation}</small></span>
           <span><Icon name="flask" size={28} />{Math.round(last?.sci ?? 0)}<small>{t.ui.discoveries}</small></span>
         </div>
-        <p className="end-code">{t.end.missionCode.replaceAll('{code}', String(code))}</p>
+        <MissionCode t={t} code={code} />
         <div className="row">
           <button type="button" className="btn btn-amber big" onClick={onReport} autoFocus>{t.report.button}</button>
           {cert}
@@ -103,11 +117,23 @@ export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, o
       <div className="end-side">
         <div className="oppy panel">
           <div className="panel-title"><Icon name="signal" size={30} />{t.end.oppyTitle} <Chip label="real" t={t} /></div>
-          <p>{t.end.oppy} {t.end.oppyNeed} <b>{ok ? t.end.oppyWin : t.end.oppyFail}</b></p>
+          <p>{t.end.oppyNeed} {t.end.oppy} <b>{ok ? t.end.oppyWin : t.end.oppyFail}</b></p>
         </div>
         <SunToday t={t} />
       </div>
     </div>
+  );
+}
+
+const SITE = 'mars-storm-crew.vercel.app';
+
+function MissionCode({ t, code }: { t: Strings; code: number }) {
+  const link = `${SITE}/?seed=${code}`;
+  const [before, after] = t.end.missionCode.replaceAll('{code}', String(code)).split('{link}');
+  return (
+    <p className="end-code">
+      {before}<a href={`https://${link}`} target="_blank" rel="noreferrer">{link}</a>{after}
+    </p>
   );
 }
 

@@ -19,7 +19,6 @@
   "sources": "Where is this data from?",
   "close": "Close",
   "min": "min",
-  "sec": "s",
   "waiting": "Calling Earth… waiting for the answer",
   "waitNote": "Your question flies to Earth and the answer flies back. On Mars, that really takes",
   "wallTitle": "The water wall",
@@ -64,7 +63,6 @@
   "chartLife": "Life (%)",
   "chartDose": "Radiation (%)",
   "rotate": "Turn your phone sideways to play.",
-  "storm2Title": "Day 24",
   "sound": "Sound",
   "skip": "Skip ▸▸",
   "tapNext": "Tap to continue",
@@ -74,7 +72,6 @@
   "play": "Play",
   "howtoTitle": "How to play",
   "howtoLead": "You lead a small Mars base through a 30-day dust storm.",
-  "termHint": "Tap a dotted word to learn what it means.",
   "solCard": "1 sol = 24 h 40 min",
   "pickTitle": "Choose your Commander",
   "pickLead": "Who will lead the crew? Pick the face you like.",
@@ -85,7 +82,8 @@
   "askMia": "Is Earth awake right now?",
   "nameLabel": "Your Commander name",
   "namePlaceholder": "A nickname, e.g. Star",
-  "nameNote": "Only on this device. Use a nickname, not your full name."
+  "nameNote": "Only on this device. Use a nickname, not your full name.",
+  "sec": "s"
  },
  "labels": {
   "real": "Real data",
@@ -403,7 +401,6 @@
    "food": "Day {sol}: the food ran out.",
    "dose": "Day {sol}: the crew got too much radiation."
   },
-  "realLife": "In real life, this storm lasted many more weeks.",
   "sunQ": "If you were at the station today, would you shelter?",
   "sunLoading": "Asking NASA's DONKI…",
   "sunCount": "Radiation storms recorded: {n}.",
@@ -438,9 +435,9 @@
    "dose": "The ship landed on Day 30, just as the radiation got too high. Everyone is safe."
   },
   "oppyNeed": "To wake up, it needed the dust level to fall below 2.",
-  "missionCode": "Mission code {code}: open the game with ?seed={code} to replay this storm.",
+  "missionCode": "Mission code {code}. Replay this storm: {link}",
   "sunFlares": "In the last 30 days, the Sun had {f} strong flares.",
-  "sunMars": "NASA's model predicted {m} solar storm clouds flying toward Mars (forecast)."
+  "sunMars": "NASA's model forecasts {m} solar storm clouds will fly to Mars."
  },
  "sources": {
   "title": "Where is this data from?",
@@ -514,16 +511,16 @@
     "https://doi.org/10.1029/2019JE006111"
    ],
    [
-    "Radiation on Mars, every hour since 2012: Curiosity RAD, NASA OSDR RadLab",
-    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
-   ],
-   [
     "The September 2017 solar storm in DONKI (X8.2 flare, 10 Sep 2017)",
     "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1"
    ],
    [
     "Where Opportunity (Meridiani) and Curiosity (Gale) are: NASA Mars Trek",
     "https://trek.nasa.gov/mars/"
+   ],
+   [
+    "Radiation on Mars measured by Curiosity: RAD data in NASA OSDR RadLab",
+    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
    ]
   ],
   "credits": [
@@ -735,6 +732,7 @@
   "badge": "Badge",
   "code": "Mission code",
   "date": "Date",
-  "footer": "A NASA Space Apps Challenge 2026 project. A game certificate, not an official NASA document."
+  "footer": "A NASA Space Apps Challenge 2026 project. A game certificate, not an official NASA document.",
+  "fail": "Couldn't make the certificate. Please try again!"
  }
 }

@@ -11,7 +11,7 @@ export type SunSummary = {
 };
 
 type Flare = { classType?: string };
-type Enlil = { cmeInputs?: { associatedCMEID?: string }[]; impactList?: { location?: string }[] | null };
+type Enlil = { cmeInputs?: { CMEID?: string; associatedCMEID?: string }[]; impactList?: { location?: string }[] | null };
 
 export function summarize(sep: unknown, flr: unknown, enlil: unknown, date: string): SunSummary {
   const arr = <T,>(x: unknown) => (Array.isArray(x) ? (x as T[]) : []);
@@ -21,7 +21,7 @@ export function summarize(sep: unknown, flr: unknown, enlil: unknown, date: stri
   const toMars = new Set<string>();
   arr<Enlil>(enlil).forEach((s, i) => {
     if (!(s.impactList ?? []).some((h) => /mars/i.test(h.location ?? ''))) return;
-    const ids = (s.cmeInputs ?? []).map((c) => c.associatedCMEID).filter(Boolean) as string[];
+    const ids = (s.cmeInputs ?? []).map((c) => c.CMEID ?? c.associatedCMEID).filter(Boolean) as string[];
     (ids.length ? ids : [`sim-${i}`]).forEach((id) => toMars.add(id));
   });
   return { sep: arr(sep).length, flares: flares.length, strong, mars: toMars.size, date };
@@ -34,8 +34,8 @@ export const donkiQuery = (end: Date) => {
 
 /** Servers to try in order. Each returns the URL for one DONKI type. */
 export const DONKI_SERVERS: ((type: string, q: string) => string)[] = [
-  (type, q) => `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/${type}?${q}`,
   (type, q) => `https://ccmc.gsfc.nasa.gov/DONKI-API/get/${type}?${q}`,
+  (type, q) => `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/${type}?${q}`,
   (type, q) => `https://api.nasa.gov/DONKI/${type}?${q}&api_key=DEMO_KEY`,
 ];
 
