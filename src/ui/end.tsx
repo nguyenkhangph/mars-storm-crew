@@ -5,27 +5,25 @@ import { DECISION_SOLS, LAST_SOL } from '../engine/params';
 import type { Strings } from '../i18n';
 import { Chip, Icon, Modal, Portrait } from './bits';
 import { cardsFor, endingFor } from './text';
+import { DONKI_SERVERS, donkiQuery, summarize, type SunSummary } from '../data/donki';
 
-const CACHE = 'solcrew.donki';
-type Sun = { n: number; date: string; cached?: boolean };
+const CACHE = 'solcrew.donki2';
+type Sun = SunSummary & { cached?: boolean };
 
-/** Keyless DONKI endpoints first (DEMO_KEY allows few calls per hour), then the last good answer. */
-async function fetchSep(signal: AbortSignal): Promise<Sun> {
-  const end = new Date();
-  const d = (x: Date) => x.toISOString().slice(0, 10);
-  const q = `startDate=${d(new Date(end.getTime() - 30 * 864e5))}&endDate=${d(end)}`;
-  const urls = [
-    `https://ccmc.gsfc.nasa.gov/DONKI-API/get/SEP?${q}`,
-    `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/SEP?${q}`,
-    `https://api.nasa.gov/DONKI/SEP?${q}&api_key=DEMO_KEY`,
-  ];
-  for (const u of urls) {
+async function getJson(url: string, signal: AbortSignal): Promise<unknown> {
+  const r = await fetch(url, { signal });
+  if (!r.ok) throw new Error(String(r.status));
+  const text = await r.text();
+  return text.trim() ? JSON.parse(text) : [];
+}
+
+/** Radiation storms, flares and Mars-bound CMEs from DONKI; then the last good answer; then the bundled snapshot. */
+async function fetchSun(signal: AbortSignal): Promise<Sun> {
+  const { q, date } = donkiQuery(new Date());
+  for (const url of DONKI_SERVERS) {
     try {
-      const r = await fetch(u, { signal });
-      if (!r.ok) continue;
-      const text = await r.text();
-      const j: unknown = text.trim() ? JSON.parse(text) : [];
-      const sun = { n: Array.isArray(j) ? j.length : 0, date: d(end) };
+      const [sep, flr, enlil] = await Promise.all(['SEP', 'FLR', 'WSAEnlilSimulations'].map((ty) => getJson(url(ty, q), signal)));
+      const sun = summarize(sep, flr, enlil, date);
       try { localStorage.setItem(CACHE, JSON.stringify(sun)); } catch { /* ignore */ }
       return sun;
     } catch (e) {
@@ -35,29 +33,29 @@ async function fetchSep(signal: AbortSignal): Promise<Sun> {
   const saved = (() => { try { return localStorage.getItem(CACHE); } catch { return null; } })();
   if (saved) return { ...(JSON.parse(saved) as Sun), cached: true };
   // snapshot bundled at build time by `npm run snapshot`
-  try {
-    const r = await fetch(`${import.meta.env.BASE_URL}donki-snapshot.json`, { signal });
-    if (r.ok) return { ...((await r.json()) as Sun), cached: true };
-  } catch (e) {
-    if (signal.aborted) throw e;
-  }
-  throw new Error('DONKI unreachable');
+  const snap = (await getJson(`${import.meta.env.BASE_URL}donki-snapshot.json`, signal)) as Partial<Sun>;
+  return { sep: 0, flares: 0, strong: 0, mars: 0, date: '', ...snap, cached: true };
 }
 
 function SunToday({ t }: { t: Strings }) {
   const [sun, setSun] = useState<Sun | null | 'fail'>(null);
   useEffect(() => {
     const ctl = new AbortController();
-    fetchSep(ctl.signal).then(setSun).catch(() => !ctl.signal.aborted && setSun('fail'));
+    fetchSun(ctl.signal).then(setSun).catch(() => !ctl.signal.aborted && setSun('fail'));
     return () => ctl.abort();
   }, []);
-  const n = sun && sun !== 'fail' ? sun.n : null;
-  const msg = sun === null ? t.end.sunLoading : sun === 'fail' ? t.end.sunFail
-    : (n === 0 ? t.end.sunNone : t.end.sunCount.replace('{n}', String(n))) + (sun.cached ? ` (${sun.date})` : '');
+  const fill = (s: string, x: Sun) => s.replace('{f}', String(x.strong)).replace('{m}', String(x.mars)).replace('{n}', String(x.sep));
   return (
     <div className="sun panel">
       <div className="panel-title"><Icon name="star" size={32} />{t.ui.sunToday} <Chip label="real" t={t} /></div>
-      <p role="status">{msg}</p>
+      {sun === null && <p role="status">{t.end.sunLoading}</p>}
+      {sun === 'fail' && <p role="status">{t.end.sunFail}</p>}
+      {sun && sun !== 'fail' && (
+        <p role="status">
+          {fill(t.end.sunFlares, sun)} {fill(t.end.sunMars, sun)} {sun.sep > 0 ? fill(t.end.sunCount, sun) : t.end.sunNone}
+          {sun.cached && sun.date ? ` (${sun.date})` : ''}
+        </p>
+      )}
       <p className="sun-q">{t.end.sunQ}</p>
       <a href="https://ccmc.gsfc.nasa.gov/DONKI/" target="_blank" rel="noreferrer">NASA DONKI ↗</a>
     </div>
@@ -194,6 +192,8 @@ export function Sources({ t, onClose }: { t: Strings; onClose: () => void }) {
       <dl className="words">{s.words.map(([w, d]) => <div key={w}><dt>{w}</dt><dd>{d}</dd></div>)}</dl>
       <h3>{s.dataTitle}</h3>
       <ul className="notes">{s.data.map(([n, url]) => <li key={url}><a href={url} target="_blank" rel="noreferrer">{n} ↗</a></li>)}</ul>
+      <h3>{s.teachersTitle}</h3>
+      <ul className="notes">{s.teachers.map(([n, url]) => <li key={url}><a href={url} target="_blank" rel="noreferrer">{n} ↗</a></li>)}</ul>
       <h3>{s.creditsTitle}</h3>
       <ul className="notes">{s.credits.map((n) => <li key={n}>{n}</li>)}</ul>
     </Modal>

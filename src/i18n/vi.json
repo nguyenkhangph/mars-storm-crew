@@ -251,7 +251,7 @@
    "after": {
     "keep": "[[greenhouse|Nhà kính]] vẫn ra rau, nhưng ngày nào cũng tốn điện.",
     "off": "Không đèn thì rau không lớn. Từ giờ phải ăn dè sẻn.",
-    "source": "Opportunity chạy bằng nắng. Không có nắng, nó không sạc được.",
+    "source": "Opportunity chạy bằng nắng. Không có nắng, nó không sạc được. Bụi che được ánh nắng nhưng không chặn được [[radiation|bức xạ]] vũ trụ: trong cơn bão, Curiosity vẫn đo được khoảng 9 [[doseUnit|đơn vị]] mỗi giờ (NASA RadLab).",
     "dim": "Nửa ánh sáng, nửa phần rau. Một lựa chọn ở giữa."
    },
    "react": {
@@ -294,7 +294,7 @@
    "after": {
     "real": "Bão thật! Những hạt nhanh nhất ập tới trước cả câu trả lời.",
     "false": "Chỉ là [[falseAlarm|báo động giả]]. Lần này hỏi trước nên đỡ tốn điện.",
-    "source": "Tháng 9/2017, bức xạ trên Sao Hỏa đã thật sự tăng hơn gấp đôi.",
+    "source": "Dữ liệu thật từ Curiosity (NASA RadLab): ngày thường ở hố Gale, bức xạ khoảng 8 [[doseUnit|đơn vị]] mỗi giờ. Ngày 11/9/2017, nó vọt lên khoảng 18, hơn gấp đôi!",
     "falseShelter": "Chỉ là [[falseAlarm|báo động giả]]. Máy sưởi trong [[shelter|hầm]] đã tốn điện vô ích.",
     "clueWrong": "Lần này manh mối đã sai. Manh mối tốt đôi khi cũng đánh lừa mình."
    },
@@ -406,8 +406,8 @@
   "realLife": "Ngoài đời, cơn bão này còn kéo dài thêm nhiều tuần.",
   "sunQ": "Nếu em ở trạm hôm nay, em có vào hầm không?",
   "sunLoading": "Đang hỏi DONKI của NASA…",
-  "sunCount": "DONKI ghi nhận {n} đợt hạt năng lượng cao từ Mặt Trời trong 30 ngày qua.",
-  "sunNone": "DONKI không ghi nhận đợt hạt năng lượng cao nào từ Mặt Trời trong 30 ngày qua.",
+  "sunCount": "Số đợt bão bức xạ ghi nhận: {n}.",
+  "sunNone": "Không ghi nhận đợt bão bức xạ nào.",
   "sunFail": "Chưa kết nối được DONKI. Xem trực tiếp tại trang của NASA.",
   "decisionNames": {
    "4": "Ngày 4 · Tường nước",
@@ -438,7 +438,9 @@
    "dose": "Tàu đáp xuống đúng Ngày 30, khi bức xạ vừa vượt mức. Cả đội an toàn."
   },
   "oppyNeed": "Để thức dậy, nó cần độ mờ bụi giảm xuống dưới 2.",
-  "missionCode": "Mã nhiệm vụ {code}: mở game với ?seed={code} để chơi lại cơn bão này."
+  "missionCode": "Mã nhiệm vụ {code}: mở game với ?seed={code} để chơi lại cơn bão này.",
+  "sunFlares": "Trong 30 ngày qua, Mặt Trời có {f} lần bùng sáng mạnh.",
+  "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời bay tới Sao Hỏa (dự báo)."
  },
  "sources": {
   "title": "Dữ liệu này từ đâu?",
@@ -510,6 +512,18 @@
    [
     "Bụi phủ toàn hành tinh sau tháng 6/2018: Montabone và cộng sự 2020",
     "https://doi.org/10.1029/2019JE006111"
+   ],
+   [
+    "Bức xạ trên Sao Hỏa từng giờ từ 2012: Curiosity RAD, NASA OSDR RadLab",
+    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
+   ],
+   [
+    "Cơn bão Mặt Trời tháng 9/2017 trong DONKI (bùng sáng X8.2, 10/9/2017)",
+    "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1"
+   ],
+   [
+    "Vị trí Opportunity (Meridiani) và Curiosity (Gale): NASA Mars Trek",
+    "https://trek.nasa.gov/mars/"
    ]
   ],
   "credits": [
@@ -519,6 +533,13 @@
    "Cảnh trạm: nhóm Vượt Bão Sao Hỏa ghép từ các sprite trên",
    "Phông chữ: Be Vietnam Pro (giấy phép SIL Open Font License 1.1)",
    "Mã nguồn: nhóm Vượt Bão Sao Hỏa, giấy phép MIT"
+  ],
+  "teachersTitle": "Dành cho giáo viên",
+  "teachers": [
+   [
+    "Trồng thức ăn trong không gian: bộ tài liệu lớp học của Cơ quan Vũ trụ Canada (CSA)",
+    "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/"
+   ]
   ]
  },
  "cutscene": [
@@ -612,7 +633,8 @@
   "delay": "Tin nhắn bay nhanh như ánh sáng, nhưng Sao Hỏa xa quá nên vẫn mất vài phút.",
   "oxygen": "Khí để thở. Trạm dùng điện để tạo ra nó.",
   "falseAlarm": "Khi chuông báo kêu nhưng thật ra chẳng có gì nguy hiểm.",
-  "ice": "Dưới đất Sao Hỏa có nước đóng băng. Làm tan ra là uống được."
+  "ice": "Dưới đất Sao Hỏa có nước đóng băng. Làm tan ra là uống được.",
+  "doseUnit": "Micro-gray mỗi giờ (µGy/h): lượng bức xạ cơ thể hấp thụ mỗi giờ. Số càng lớn, bức xạ càng nhiều."
  },
  "report": {
   "button": "Báo cáo nhiệm vụ",

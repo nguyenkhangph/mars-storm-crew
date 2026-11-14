@@ -251,7 +251,7 @@
    "after": {
     "keep": "The [[greenhouse|greenhouse]] keeps growing food, but it costs power every day.",
     "off": "No lights, no growing. Food will be tight from now on.",
-    "source": "Opportunity ran on sunlight. With no sun, it could not recharge.",
+    "source": "Opportunity ran on sunlight. With no sun, it could not recharge. Dust blocks sunlight but not cosmic [[radiation|radiation]]: Curiosity still measured about 9 [[doseUnit|units]] per hour during the storm (NASA RadLab).",
     "dim": "Half the light, half the food. A path in the middle."
    },
    "react": {
@@ -294,7 +294,7 @@
    "after": {
     "real": "It was real! The fastest bits arrived before Earth could even answer.",
     "false": "It was a [[falseAlarm|false alarm]]. Asking first saved power this time.",
-    "source": "In September 2017, radiation on Mars really did more than double.",
+    "source": "Real data from Curiosity (NASA RadLab): on a normal day at Gale Crater, radiation is about 8 [[doseUnit|units]] per hour. On 11 September 2017 it jumped to about 18, more than double!",
     "falseShelter": "It was a [[falseAlarm|false alarm]]. The [[shelter|shelter]] heaters used power for nothing.",
     "clueWrong": "The clue was wrong this time. Even good clues can trick us."
    },
@@ -406,8 +406,8 @@
   "realLife": "In real life, this storm lasted many more weeks.",
   "sunQ": "If you were at the station today, would you shelter?",
   "sunLoading": "Asking NASA's DONKI…",
-  "sunCount": "DONKI recorded {n} solar energetic particle events in the last 30 days.",
-  "sunNone": "DONKI recorded no solar energetic particle events in the last 30 days.",
+  "sunCount": "Radiation storms recorded: {n}.",
+  "sunNone": "No radiation storm was recorded.",
   "sunFail": "Couldn't reach DONKI. See NASA's page directly.",
   "decisionNames": {
    "4": "Day 4 · Water wall",
@@ -438,7 +438,9 @@
    "dose": "The ship landed on Day 30, just as the radiation got too high. Everyone is safe."
   },
   "oppyNeed": "To wake up, it needed the dust level to fall below 2.",
-  "missionCode": "Mission code {code}: open the game with ?seed={code} to replay this storm."
+  "missionCode": "Mission code {code}: open the game with ?seed={code} to replay this storm.",
+  "sunFlares": "In the last 30 days, the Sun had {f} strong flares.",
+  "sunMars": "NASA's model predicted {m} solar storm clouds flying toward Mars (forecast)."
  },
  "sources": {
   "title": "Where is this data from?",
@@ -510,6 +512,18 @@
    [
     "Planet-wide dust after June 2018: Montabone et al. 2020",
     "https://doi.org/10.1029/2019JE006111"
+   ],
+   [
+    "Radiation on Mars, every hour since 2012: Curiosity RAD, NASA OSDR RadLab",
+    "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
+   ],
+   [
+    "The September 2017 solar storm in DONKI (X8.2 flare, 10 Sep 2017)",
+    "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1"
+   ],
+   [
+    "Where Opportunity (Meridiani) and Curiosity (Gale) are: NASA Mars Trek",
+    "https://trek.nasa.gov/mars/"
    ]
   ],
   "credits": [
@@ -519,6 +533,13 @@
    "Station scenes: put together by the Mars Storm Crew team from these sprites",
    "Font: Be Vietnam Pro (SIL Open Font License 1.1)",
    "Code: Mars Storm Crew team, MIT License"
+  ],
+  "teachersTitle": "For teachers",
+  "teachers": [
+   [
+    "Grow food in space: classroom toolkit from the Canadian Space Agency",
+    "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/"
+   ]
   ]
  },
  "cutscene": [
@@ -612,7 +633,8 @@
   "delay": "Messages fly as fast as light, but Mars is so far away that they still take minutes.",
   "oxygen": "The air we breathe. The station makes it with electricity.",
   "falseAlarm": "When an alarm goes off but nothing dangerous is really happening.",
-  "ice": "Mars has frozen water under the ground. Melt it, and you can drink it."
+  "ice": "Mars has frozen water under the ground. Melt it, and you can drink it.",
+  "doseUnit": "Micro-gray per hour (µGy/h): how much radiation a body soaks up each hour. A bigger number means more radiation."
  },
  "report": {
   "button": "Mission report",
