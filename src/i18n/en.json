@@ -101,10 +101,6 @@
   "scientist": "Scientist",
   "botanist": "Plant expert"
  },
- "intro": [
-  "In 2018, dust hid the Sun. Opportunity never woke up.",
-  "Now it's your turn to keep the lights on."
- ],
  "sols": {
   "4": {
    "bulletin": "An [[orbiter|orbiter]] just spotted a dust storm growing.",
@@ -118,7 +114,7 @@
    },
    "cards": {},
    "after": {
-    "default": "Dust only blocks sunlight. A [[waterWall|water wall]] protects against [[radiation|radiation]] from the Sun."
+    "default": "Dust blocks sunlight, so the panels make less power. It does not stop [[radiation|radiation]] from the Sun. A [[waterWall|water wall]] helps with that."
    },
    "react": {
     "default": [
@@ -250,7 +246,7 @@
     "keep": "The [[greenhouse|greenhouse]] keeps growing food, but it costs power every day.",
     "off": "No lights, no growing. The next days will have less food.",
     "source": "Opportunity ran on sunlight. With no sun, it could not recharge. Dust blocks sunlight but not cosmic [[radiation|radiation]]: Curiosity still measured about 9 [[doseUnit|units]] per hour during the storm (NASA RadLab).",
-    "dim": "Half the light, half the food. The next days will have less food."
+    "dim": "Half the light, half the food. A little less food in the next days."
    },
    "react": {
     "keep": [
@@ -423,7 +419,7 @@
   },
   "failTitle": "Mission ended early.",
   "keyChoice": "The choice that changed the most: {name} · {option}",
-  "oppy": "The real Opportunity never woke up. On 13 February 2019, NASA said goodbye after 15 years on Mars.",
+  "oppy": "It never woke up. On 13 February 2019, NASA said goodbye after 15 years on Mars.",
   "oppyWin": "Your crew kept the lights on.",
   "oppyFail": "Your crew made it home safe.",
   "oppyTitle": "Remembering Opportunity",
@@ -432,9 +428,9 @@
    "o2": "The ship landed on Day 30, just as the air ran low. Everyone is safe.",
    "water": "The ship landed on Day 30, just as the water ran out. Everyone is safe.",
    "food": "The ship landed on Day 30, just as the food ran out. Everyone is safe.",
-   "dose": "The ship landed on Day 30, just as the radiation got too high. Everyone is safe."
+   "dose": "The ship landed on Day 30, just as the crew reached the radiation limit. Everyone is safe."
   },
-  "oppyNeed": "To wake up, it needed the dust level to fall below 2.",
+  "oppyNeed": "The real Opportunity needed the dust level to fall below 2 to wake up.",
   "missionCode": "Mission code {code}. Replay this storm: {link}",
   "sunFlares": "In the last 30 days, the Sun had {f} strong flares.",
   "sunMars": "NASA's model forecasts {m} solar storm clouds will fly to Mars."
@@ -523,7 +519,7 @@
     "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
    ],
    [
-    "Water walls cut the radiation dose by about 50–70%: NASA RadWorks study (NTRS 20150001237)",
+    "Storm shelters with water walls can cut the radiation dose by about half: NASA RadWorks study (NTRS 20150001237)",
     "https://ntrs.nasa.gov/citations/20150001237"
    ]
   ],

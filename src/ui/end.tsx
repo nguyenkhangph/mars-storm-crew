@@ -125,7 +125,7 @@ export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, o
   );
 }
 
-const SITE = 'mars-storm-crew.vercel.app';
+const SITE = 'stormcrew.space';
 
 function MissionCode({ t, code }: { t: Strings; code: number }) {
   const link = `${SITE}/?seed=${code}`;

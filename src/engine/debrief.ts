@@ -64,7 +64,7 @@ const skipped = (run: Run, s: DecisionSol) => s === 21 && (run.rows[19]?.wall ??
 /**
  * Mission report computed by replaying the game. A choice is judged by what
  * the player could know at that moment (expected result over the luck still
- * hidden), not by hindsight. The effects shown use the real run. No AI.
+ * hidden), not by hindsight. The effects shown use the real run. No language model is used.
  */
 export function debrief(c: Choices, luck: Luck): Debrief {
   const run = simulate(c, luck);

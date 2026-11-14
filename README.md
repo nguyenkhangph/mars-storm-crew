@@ -10,7 +10,7 @@ English by default, Vietnamese with the **VI** button (or `?lang=vi`).
 On iPhone, Safari → Share → **Add to Home Screen** opens the game full screen in landscape.
 The Commander can pick a face and type a nickname (kept only in this browser). At the end, a certificate PNG is drawn in the browser and downloaded; nothing is uploaded, and it says it is not an official NASA document.
 
-Play: https://mars-storm-crew.vercel.app
+Play: https://www.stormcrew.space
 
 Demo seeds: `?seed=998` real storm, `?seed=3989` real storm + second storm, `?seed=1` false alarm, `?seed=8` false alarm + second storm, `?seed=3` false alarm where the meter clue misleads. The end screen shows each game's mission code so a class can replay the same storm.
 `npm run snapshot` saves a 30-day DONKI summary (radiation storms, strong flares, CMEs forecast to reach Mars) to `public/donki-snapshot.json` as an offline fallback.
@@ -47,7 +47,7 @@ Without the packs the game still runs; pictures are just blank.
 - `src/engine/` is a pure simulation: `simulate(choices, luck)` always gives the same run, so *What if?* re-runs it with one choice changed.
 - `src/data/delay.ts`: Earth–Mars light time per day from JPL Horizons.
 - `src/data/tau.ts`: dust haze. Only 10.8 on sol 14 (10 June 2018, Opportunity) is measured; the rest is a game curve.
-- `src/engine/debrief.ts`: the end-of-mission report. It replays the run with every other option at each decision (same luck) to rate safety, radiation, discoveries and smart choices, and to name the best choice and one worth retrying. It is built from the simulation itself (SI): no AI or language model.
+- `src/engine/debrief.ts`: the end-of-mission report. It replays the run with every other option at each decision (same luck) to rate safety, radiation, discoveries and smart choices, and to name the best choice and one worth retrying. It is built from the simulation itself (SI): no language model is used.
 - Every bulletin carries a label: Real data, Based on a real event, Scenario, or Game number.
 
 ## Sources
@@ -58,7 +58,7 @@ Without the packs the game still runs; pictures are just blank.
 - Earth–Mars distance: JPL Horizons
 - Live space weather (radiation storms, strong flares, CMEs forecast to reach Mars): NASA DONKI (`ccmc.gsfc.nasa.gov/DONKI-API`)
 - The September 2017 storm in DONKI: https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13101/-1
-- Water walls cut radiation dose by about 50–70%: NASA RadWorks (https://ntrs.nasa.gov/citations/20150001237)
+- Storm shelters with water walls can cut the radiation dose by about half: NASA RadWorks study (https://ntrs.nasa.gov/citations/20150001237)
 - Where Opportunity (Meridiani) and Curiosity (Gale) are: NASA Mars Trek (https://trek.nasa.gov/mars/)
 - For teachers: Canadian Space Agency food-production toolkit (https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/)
 

@@ -101,10 +101,6 @@
   "scientist": "Nhà khoa học",
   "botanist": "Nhà trồng cây"
  },
- "intro": [
-  "Năm 2018, bụi che kín Mặt Trời. Opportunity ngủ mãi không dậy.",
-  "Giờ đến lượt em giữ trạm sáng đèn."
- ],
  "sols": {
   "4": {
    "bulletin": "Một [[orbiter|tàu bay quanh Sao Hỏa]] vừa thấy bão bụi đang lớn dần.",
@@ -118,7 +114,7 @@
    },
    "cards": {},
    "after": {
-    "default": "Bụi chỉ che nắng. [[waterWall|Tường nước]] mới chắn được [[radiation|bức xạ]] từ Mặt Trời."
+    "default": "Bụi che nắng nên tấm pin ít điện hơn. Bụi không chặn được [[radiation|bức xạ]] từ Mặt Trời. [[waterWall|Tường nước]] giúp chắn bớt."
    },
    "react": {
     "default": [
@@ -250,7 +246,7 @@
     "keep": "[[greenhouse|Nhà kính]] vẫn ra rau, nhưng ngày nào cũng tốn điện.",
     "off": "Không đèn thì rau không lớn. Những ngày tới sẽ ít thức ăn hơn.",
     "source": "Opportunity chạy bằng nắng. Không có nắng, nó không sạc được. Bụi che được ánh nắng nhưng không chặn được [[radiation|bức xạ]] vũ trụ: trong cơn bão, Curiosity vẫn đo được khoảng 9 [[doseUnit|đơn vị]] mỗi giờ (NASA RadLab).",
-    "dim": "Nửa ánh sáng, nửa phần rau. Những ngày tới sẽ ít thức ăn hơn."
+    "dim": "Nửa ánh sáng, nửa phần rau. Những ngày tới sẽ hơi ít thức ăn."
    },
    "react": {
     "keep": [
@@ -423,7 +419,7 @@
   },
   "failTitle": "Nhiệm vụ kết thúc sớm.",
   "keyChoice": "Lựa chọn tạo khác biệt lớn nhất: {name} · {option}",
-  "oppy": "Opportunity thật đã không bao giờ tỉnh lại. Ngày 13/2/2019, NASA chào tạm biệt nó sau 15 năm trên Sao Hỏa.",
+  "oppy": "Nó đã không bao giờ tỉnh lại. Ngày 13/2/2019, NASA chào tạm biệt nó sau 15 năm trên Sao Hỏa.",
   "oppyWin": "Đội của em đã giữ cho đèn trạm sáng.",
   "oppyFail": "Đội của em đã về nhà an toàn.",
   "oppyTitle": "Nhớ về Opportunity",
@@ -432,9 +428,9 @@
    "o2": "Tàu đáp xuống đúng Ngày 30, khi khí thở vừa cạn. Cả đội an toàn.",
    "water": "Tàu đáp xuống đúng Ngày 30, khi nước vừa cạn. Cả đội an toàn.",
    "food": "Tàu đáp xuống đúng Ngày 30, khi thức ăn vừa cạn. Cả đội an toàn.",
-   "dose": "Tàu đáp xuống đúng Ngày 30, khi bức xạ vừa vượt mức. Cả đội an toàn."
+   "dose": "Tàu đáp xuống đúng Ngày 30, khi cả đội vừa chạm ngưỡng bức xạ. Cả đội an toàn."
   },
-  "oppyNeed": "Để thức dậy, nó cần độ mờ bụi giảm xuống dưới 2.",
+  "oppyNeed": "Opportunity thật cần độ mờ bụi giảm xuống dưới 2 mới thức dậy được.",
   "missionCode": "Mã nhiệm vụ {code}. Chơi lại cơn bão này: {link}",
   "sunFlares": "Trong 30 ngày qua, Mặt Trời có {f} lần bùng sáng mạnh.",
   "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời sẽ bay tới Sao Hỏa."
@@ -523,7 +519,7 @@
     "https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
    ],
    [
-    "Tường nước giảm khoảng 50–70% liều bức xạ: nghiên cứu RadWorks của NASA (NTRS 20150001237)",
+    "Hầm trú bão có tường nước có thể giảm khoảng một nửa liều bức xạ: nghiên cứu RadWorks của NASA (NTRS 20150001237)",
     "https://ntrs.nasa.gov/citations/20150001237"
    ]
   ],
