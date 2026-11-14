@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Choices, DecisionSol, Luck, Run } from '../engine/types';
 import { alternative, biggestSplit, simulate } from '../engine/engine';
 import { DECISION_SOLS, LAST_SOL } from '../engine/params';
-import type { Lang, Strings } from '../i18n';
+import { formatDate, type Lang, type Strings } from '../i18n';
 import { Chip, Icon, Modal, Portrait } from './bits';
 import { cardsFor, endingFor } from './text';
 import { DONKI_SERVERS, donkiQuery, summarize, type SunSummary } from '../data/donki';
@@ -63,7 +63,7 @@ async function fetchSun(signal: AbortSignal): Promise<Sun> {
   return { sep: 0, flares: 0, strong: 0, mars: 0, date: '', ...snap, cached: true };
 }
 
-function SunToday({ t }: { t: Strings }) {
+function SunToday({ t, lang }: { t: Strings; lang: Lang }) {
   const [sun, setSun] = useState<Sun | null | 'fail'>(null);
   useEffect(() => {
     const ctl = new AbortController();
@@ -82,7 +82,7 @@ function SunToday({ t }: { t: Strings }) {
           {fill(t.end.sunFlares, sun)} {fill(t.end.sunMars, sun)} {sun.sep > 0 ? fill(t.end.sunCount, sun) : t.end.sunNone}
         </p>
       )}
-      {sun && sun !== 'fail' && sun.cached && <p className="sun-saved">{t.end.sunSaved.replace('{date}', sun.date)}</p>}
+      {sun && sun !== 'fail' && sun.cached && <p className="sun-saved">{t.end.sunSaved.replace('{date}', formatDate(new Date(`${sun.date}T12:00:00Z`), lang))}</p>}
       <p className="sun-q">{t.end.sunQ}</p>
       <a href="https://ccmc.gsfc.nasa.gov/DONKI/" target="_blank" rel="noreferrer">NASA DONKI ↗</a>
     </div>
@@ -132,7 +132,7 @@ export function EndScreen({ t, lang, run, choices, luck, code, name, cert, onRep
           <div className="panel-title"><Icon name="signal" size={30} />{t.end.oppyTitle} <Chip label="real" t={t} /></div>
           <p>{t.end.oppyNeed} {t.end.oppy} <b>{ok ? t.end.oppyWin : t.end.oppyFail}</b></p>
         </div>
-        <SunToday t={t} />
+        <SunToday t={t} lang={lang} />
       </div>
     </div>
   );
