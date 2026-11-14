@@ -35,7 +35,6 @@ export const donkiQuery = (end: Date) => {
 /** Servers to try in order. Each returns the URL for one DONKI type. */
 export const DONKI_SERVERS: ((type: string, q: string) => string)[] = [
   (type, q) => `https://ccmc.gsfc.nasa.gov/DONKI-API/get/${type}?${q}`,
-  (type, q) => `https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/${type}?${q}`,
   (type, q) => `https://api.nasa.gov/DONKI/${type}?${q}&api_key=DEMO_KEY`,
 ];
 

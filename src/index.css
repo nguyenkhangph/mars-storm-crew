@@ -584,3 +584,5 @@ body { -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -w
   .speaker .portrait img, .cut-crew .portrait img, .cut-commander .portrait img, .end-crew .portrait img, .pick-hero img { animation: none; }
   .speaker.talking .portrait .talk { animation: talk 0.22s steps(2) infinite; }
 }
+
+.sun-saved { margin: 2px 0 0; font-size: 0.85em; opacity: 0.8; font-style: italic; }

@@ -31,18 +31,30 @@ async function readJson(url: string, signal: AbortSignal): Promise<unknown> {
   return text.trim() ? JSON.parse(text) : [];
 }
 
+/** One DONKI data type: try each server in turn, so one broken endpoint does not sink the others. */
+async function fetchType(type: string, q: string, signal: AbortSignal): Promise<unknown> {
+  let last: unknown;
+  for (const url of DONKI_SERVERS) {
+    try {
+      return await getJson(url(type, q), signal);
+    } catch (e) {
+      if (signal.aborted) throw e;
+      last = e;
+    }
+  }
+  throw last;
+}
+
 /** Radiation storms, flares and Mars-bound CMEs from DONKI; then the last good answer; then the bundled snapshot. */
 async function fetchSun(signal: AbortSignal): Promise<Sun> {
   const { q, date } = donkiQuery(new Date());
-  for (const url of DONKI_SERVERS) {
-    try {
-      const [sep, flr, enlil] = await Promise.all(['SEP', 'FLR', 'WSAEnlilSimulations'].map((ty) => getJson(url(ty, q), signal)));
-      const sun = summarize(sep, flr, enlil, date);
-      try { localStorage.setItem(CACHE, JSON.stringify(sun)); } catch { /* ignore */ }
-      return sun;
-    } catch (e) {
-      if (signal.aborted) throw e;
-    }
+  try {
+    const [sep, flr, enlil] = await Promise.all(['SEP', 'FLR', 'WSAEnlilSimulations'].map((ty) => fetchType(ty, q, signal)));
+    const sun = summarize(sep, flr, enlil, date);
+    try { localStorage.setItem(CACHE, JSON.stringify(sun)); } catch { /* ignore */ }
+    return sun;
+  } catch (e) {
+    if (signal.aborted) throw e;
   }
   const saved = (() => { try { return localStorage.getItem(CACHE); } catch { return null; } })();
   if (saved) return { ...(JSON.parse(saved) as Sun), cached: true };
@@ -64,12 +76,13 @@ function SunToday({ t }: { t: Strings }) {
       <div className="panel-title"><Icon name="star" size={32} />{t.ui.sunToday} <Chip label="real" t={t} /></div>
       {sun === null && <p role="status">{t.end.sunLoading}</p>}
       {sun === 'fail' && <p role="status">{t.end.sunFail}</p>}
-      {sun && sun !== 'fail' && (
+      {sun && sun !== 'fail' && sun.cached && !sun.date && <p role="status">{t.end.sunFail}</p>}
+      {sun && sun !== 'fail' && !(sun.cached && !sun.date) && (
         <p role="status">
           {fill(t.end.sunFlares, sun)} {fill(t.end.sunMars, sun)} {sun.sep > 0 ? fill(t.end.sunCount, sun) : t.end.sunNone}
-          {sun.cached && sun.date ? ` (${sun.date})` : ''}
         </p>
       )}
+      {sun && sun !== 'fail' && sun.cached && <p className="sun-saved">{t.end.sunSaved.replace('{date}', sun.date)}</p>}
       <p className="sun-q">{t.end.sunQ}</p>
       <a href="https://ccmc.gsfc.nasa.gov/DONKI/" target="_blank" rel="noreferrer">NASA DONKI ↗</a>
     </div>

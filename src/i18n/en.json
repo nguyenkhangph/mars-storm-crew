@@ -433,7 +433,8 @@
   "oppyNeed": "The real Opportunity needed the dust level to fall below 2 to wake up.",
   "missionCode": "Mission code {code}. Replay this storm: {link}",
   "sunFlares": "In the last 30 days, the Sun had {f} strong flares.",
-  "sunMars": "NASA's model forecasts {m} solar storm clouds will fly to Mars."
+  "sunMars": "NASA's model forecasts {m} solar storm clouds will fly to Mars.",
+  "sunSaved": "Saved NASA data from {date}."
  },
  "sources": {
   "title": "Where is this data from?",
@@ -521,6 +522,10 @@
    [
     "Storm shelters with water walls can cut the radiation dose by about half: NASA RadWorks study (NTRS 20150001237)",
     "https://ntrs.nasa.gov/citations/20150001237"
+   ],
+   [
+    "Real experiments on young plants and space-like radiation: NASA OSDR (OSD-46)",
+    "https://osdr.nasa.gov/bio/repo/data/studies/OSD-46"
    ]
   ],
   "credits": [
@@ -536,6 +541,10 @@
    [
     "Grow food in space: classroom toolkit from the Canadian Space Agency",
     "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/"
+   ],
+   [
+    "More free space activities for kids and clubs: Canadian Space Agency",
+    "https://www.asc-csa.gc.ca/eng/youth-educators/resources-stem-and-youth-organizations.asp"
    ]
   ]
  },

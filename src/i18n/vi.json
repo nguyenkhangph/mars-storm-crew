@@ -433,7 +433,8 @@
   "oppyNeed": "Opportunity thật cần độ mờ bụi giảm xuống dưới 2 mới thức dậy được.",
   "missionCode": "Mã nhiệm vụ {code}. Chơi lại cơn bão này: {link}",
   "sunFlares": "Trong 30 ngày qua, Mặt Trời có {f} lần bùng sáng mạnh.",
-  "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời sẽ bay tới Sao Hỏa."
+  "sunMars": "Mô hình của NASA dự báo {m} đám mây bão Mặt Trời sẽ bay tới Sao Hỏa.",
+  "sunSaved": "Dữ liệu NASA đã lưu ngày {date}."
  },
  "sources": {
   "title": "Dữ liệu này từ đâu?",
@@ -521,6 +522,10 @@
    [
     "Hầm trú bão có tường nước có thể giảm khoảng một nửa liều bức xạ: nghiên cứu RadWorks của NASA (NTRS 20150001237)",
     "https://ntrs.nasa.gov/citations/20150001237"
+   ],
+   [
+    "Thí nghiệm thật về cây non và bức xạ giống ngoài vũ trụ: NASA OSDR (OSD-46)",
+    "https://osdr.nasa.gov/bio/repo/data/studies/OSD-46"
    ]
   ],
   "credits": [
@@ -536,6 +541,10 @@
    [
     "Trồng thức ăn trong không gian: bộ tài liệu lớp học của Cơ quan Vũ trụ Canada (CSA)",
     "https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/"
+   ],
+   [
+    "Thêm hoạt động không gian miễn phí cho các em và câu lạc bộ: Cơ quan Vũ trụ Canada",
+    "https://www.asc-csa.gc.ca/eng/youth-educators/resources-stem-and-youth-organizations.asp"
    ]
   ]
  },
