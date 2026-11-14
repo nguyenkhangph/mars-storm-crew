@@ -1,8 +1,8 @@
 {
  "sep": 0,
- "flares": 0,
- "strong": 0,
- "mars": 0,
- "date": "",
- "source": "run npm run snapshot to fill this in"
+ "flares": 13,
+ "strong": 10,
+ "mars": 13,
+ "date": "2026-11-14",
+ "source": "https://ccmc.gsfc.nasa.gov/DONKI-API/get/"
 }
