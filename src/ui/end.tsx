@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Choices, DecisionSol, Luck, Run } from '../engine/types';
 import { alternative, biggestSplit, simulate } from '../engine/engine';
 import { DECISION_SOLS, LAST_SOL } from '../engine/params';
-import type { Strings } from '../i18n';
+import type { Lang, Strings } from '../i18n';
 import { Chip, Icon, Modal, Portrait } from './bits';
 import { cardsFor, endingFor } from './text';
 import { DONKI_SERVERS, donkiQuery, summarize, type SunSummary } from '../data/donki';
@@ -76,7 +76,7 @@ function SunToday({ t }: { t: Strings }) {
   );
 }
 
-export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, onAgain }: { t: Strings; run: Run; choices: Choices; luck: Luck; code: number; name: string; cert?: ReactNode; onReport: () => void; onAgain: () => void }) {
+export function EndScreen({ t, lang, run, choices, luck, code, name, cert, onReport, onAgain }: { t: Strings; lang: Lang; run: Run; choices: Choices; luck: Luck; code: number; name: string; cert?: ReactNode; onReport: () => void; onAgain: () => void }) {
   const ok = !run.fail;
   const last = run.rows[run.rows.length - 1];
   const key = useMemo(() => biggestSplit(choices, luck), [choices, luck]);
@@ -107,7 +107,7 @@ export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, o
           <span><Icon name="shield" size={28} />{Math.round(Math.min(100, last?.dose ?? 0))}%<small>{t.ui.radiation}</small></span>
           <span><Icon name="flask" size={28} />{Math.round(last?.sci ?? 0)}<small>{t.ui.discoveries}</small></span>
         </div>
-        <MissionCode t={t} code={code} />
+        <MissionCode t={t} lang={lang} code={code} />
         <div className="row">
           <button type="button" className="btn btn-amber big" onClick={onReport} autoFocus>{t.report.button}</button>
           {cert}
@@ -127,8 +127,9 @@ export function EndScreen({ t, run, choices, luck, code, name, cert, onReport, o
 
 const SITE = 'stormcrew.space';
 
-function MissionCode({ t, code }: { t: Strings; code: number }) {
-  const link = `${SITE}/?seed=${code}`;
+function MissionCode({ t, lang, code }: { t: Strings; lang: Lang; code: number }) {
+  // keep the language, so a Vietnamese link opens in Vietnamese on another device
+  const link = `${SITE}/?seed=${code}${lang === 'vi' ? '&lang=vi' : ''}`;
   const [before, after] = t.end.missionCode.replaceAll('{code}', String(code)).split('{link}');
   return (
     <p className="end-code">

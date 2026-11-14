@@ -46,8 +46,8 @@ Without the packs the game still runs; pictures are just blank.
 
 - `src/engine/` is a pure simulation: `simulate(choices, luck)` always gives the same run, so *What if?* re-runs it with one choice changed.
 - `src/data/delay.ts`: Earth–Mars light time per day from JPL Horizons.
-- `src/data/tau.ts`: dust haze. Only 10.8 on sol 14 (10 June 2018, Opportunity) is measured; the rest is a game curve.
-- `src/engine/debrief.ts`: the end-of-mission report. It replays the run with every other option at each decision (same luck) to rate safety, radiation, discoveries and smart choices, and to name the best choice and one worth retrying. It is built from the simulation itself (SI): no language model is used.
+- `src/data/tau.ts`: dust haze. Only sol 14 (10 June 2018, Opportunity, about 10.8; one NASA figure shows 10.5) is a real measurement; the rest is a game curve.
+- `src/engine/debrief.ts`: the end-of-mission report. It replays the run with every other option at each decision (same luck) to rate safety, radiation, discoveries and smart choices, and to name the best choice and one worth retrying. It is built from the simulation itself: no language model is used.
 - Every bulletin carries a label: Real data, Based on a real event, Scenario, or Game number.
 
 ## Sources

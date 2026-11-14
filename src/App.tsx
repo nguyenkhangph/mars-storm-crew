@@ -206,7 +206,7 @@ export default function App() {
       {phase === 'after' && after && (
         <After t={t} text={after.text} extra={after.extra} react={after.react} label={afterLabel} onNext={() => travelTo(nextDecision(sol))} />
       )}
-      {phase === 'end' && <EndScreen t={t} run={full} choices={choices} luck={luck} code={seed} name={cmdName} cert={cert} onReport={() => setPhase('report')} onAgain={start} />}
+      {phase === 'end' && <EndScreen t={t} lang={lang} run={full} choices={choices} luck={luck} code={seed} name={cmdName} cert={cert} onReport={() => setPhase('report')} onAgain={start} />}
       {phase === 'report' && <ReportScreen t={t} choices={choices} luck={luck} cert={cert} onWhatIf={(s) => { setFocusSol(s); setPhase('whatif'); }} onAgain={start} />}
       {phase === 'whatif' && <WhatIf t={t} choices={choices} luck={luck} initial={focusSol} onAgain={start} />}
       {phase === 'event' && (
